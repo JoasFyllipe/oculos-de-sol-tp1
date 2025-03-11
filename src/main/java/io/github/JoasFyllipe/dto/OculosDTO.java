@@ -1,39 +1,40 @@
 package io.github.JoasFyllipe.dto;
 
+import io.github.JoasFyllipe.model.Oculos;
+
 public final class OculosDTO {
     private String nome;
     private Double valor;
     private Integer quantidadeEstoque;
-    private Long idCorArmacao;
-    private Long idGenero;
-    private Long idModelo;
+    private Integer idCorArmacao;
+    private Integer idGenero;
+    private Integer idModelo;
 
     public OculosDTO(){
     }
 
-    public OculosDTO(String nome, Double valor, Integer quantidadeEstoque, Long idCorArmacao, Long idGenero, Long idModelo) {
-        this.nome = nome;
-        this.valor = valor;
-        this.quantidadeEstoque = quantidadeEstoque;
-        this.idCorArmacao = idCorArmacao;
-        this.idGenero = idGenero;
-        this.idModelo = idModelo;
+    public OculosDTO(Oculos oculos) {
+        this.nome = oculos.getNome();
+        this.valor = oculos.getValor();
+        this.quantidadeEstoque = oculos.getQuantidadeEstoque();
+        this.idCorArmacao = (oculos.getCorArmacao() != null) ? oculos.getCorArmacao().getID() : null;
+        this.idGenero = (oculos.getGenero() != null) ? oculos.getGenero().getID() : null;
+        this.idModelo = (oculos.getModelo() != null) ? oculos.getModelo().getID() : null;
     }
-
 
     public String getNome() {
         return nome;
     }
 
-    public Long getIdCorArmacao() {
+    public Integer getIdCorArmacao() {
         return idCorArmacao;
     }
 
-    public Long getIdGenero() {
+    public Integer getIdGenero() {
         return idGenero;
     }
 
-    public Long getIdModelo() {
+    public Integer getIdModelo() {
         return idModelo;
     }
 
