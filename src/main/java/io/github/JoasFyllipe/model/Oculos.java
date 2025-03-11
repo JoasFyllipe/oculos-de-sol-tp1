@@ -1,5 +1,6 @@
 package io.github.JoasFyllipe.model;
 
+import io.github.JoasFyllipe.model.converterjpa.CorArmacaoConverter;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,8 +20,11 @@ public class Oculos {
     @Column(length = 60, nullable = false)
     public Integer quantidadeEstoque;
 
+    @Convert(converter = CorArmacaoConverter.class)
     private CorArmacao corArmacao;
+    @Enumerated(EnumType.ORDINAL)
     private Genero genero;
+    @Enumerated(EnumType.ORDINAL)
     private Modelo modelo;
 
 

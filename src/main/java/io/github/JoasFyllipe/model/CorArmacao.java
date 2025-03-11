@@ -8,7 +8,7 @@ public enum CorArmacao {
     DOURADO(2, "Dourado"),
     PRATA(3, "Prata");
 
-    private final int ID;
+    private final Integer ID;
     private final String NOME;
 
     CorArmacao(int ID, String NOME) {
@@ -16,7 +16,7 @@ public enum CorArmacao {
         this.NOME = NOME;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
@@ -24,9 +24,26 @@ public enum CorArmacao {
         return NOME;
     }
 
-    public static CorArmacao valueOf(int id){
+
+    public static CorArmacao fromNome(String nome){
+        for(CorArmacao c: CorArmacao.values()){
+            if(c.getNOME().equalsIgnoreCase(nome))
+                return c;
+        }
+        throw new IllegalArgumentException("Cor não encontrada: " + nome);
+    }
+
+    public static CorArmacao fromId(int id){
         for(CorArmacao c: CorArmacao.values()){
             if(c.getID() == id)
+                return c;
+        }
+        throw new IllegalArgumentException("Cor não encontrada para o ID: "+ id);
+    }
+
+    public static CorArmacao valueOf(int id) {
+        for (CorArmacao c : CorArmacao.values()) {
+            if (c.getID() == id)
                 return c;
         }
         return null;
