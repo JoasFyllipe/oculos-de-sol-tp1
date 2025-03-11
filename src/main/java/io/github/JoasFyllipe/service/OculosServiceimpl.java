@@ -55,5 +55,29 @@ public class OculosServiceimpl implements OculosService{
         return oculosRepository.findAll().list();
     }
 
+    @Override
+    @Transactional
+    public void update(Long id, OculosDTO oculosDTO) {
+
+    }
+
+    @Override
+    public void delete(Long id) {
+        oculosRepository.deleteById(id);
+    }
+
+
+    public List<OculosDTO> findByCor(String corOuId) {
+        CorArmacao corArmacao;
+
+        try{
+            int id = Integer.parseInt(corOuId);
+            corArmacao = CorArmacao.fromId(id);
+        }
+        catch (NumberFormatException e){
+            corArmacao = CorArmacao.fromNome(corOuId);
+        }
+        return  oculosRepository.findByCor(corArmacao).stream().map(OculosDTO::new).toList();
+    }
 
 }
