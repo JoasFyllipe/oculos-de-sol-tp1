@@ -42,7 +42,8 @@ public class OculosResource {
     }
 
     @DELETE
-    public void deletarOculos(Long id){
+    @Path("{id}")
+    public void deletarOculos(@PathParam("id") Long id){
         oculosService.delete(id);
     }
 
