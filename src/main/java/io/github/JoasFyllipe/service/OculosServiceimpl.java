@@ -8,6 +8,7 @@ import io.github.JoasFyllipe.model.Oculos;
 import io.github.JoasFyllipe.repository.OculosRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 
 import java.util.List;
@@ -58,10 +59,23 @@ public class OculosServiceimpl implements OculosService{
     @Override
     @Transactional
     public void update(Long id, OculosDTO oculosDTO) {
+        Oculos oculos = oculosRepository.findById(id);
 
+        if(oculos != null) {
+            oculos.setNome(oculosDTO.getNome());
+            oculos.setValor(oculosDTO.getValor());
+            oculos.setCorArmacao(CorArmacao.valueOf(oculosDTO.getIdCorArmacao()));
+            oculos.setGenero(Genero.valueOf(oculosDTO.getIdGenero()));
+            oculos.setModelo(Modelo.valueOf(oculosDTO.getIdModelo()));
+
+        }
+        else{
+            throw new EntityNotFoundException("Óculos não encotnrado com o ID: "+id);
+        }
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
         oculosRepository.deleteById(id);
     }
