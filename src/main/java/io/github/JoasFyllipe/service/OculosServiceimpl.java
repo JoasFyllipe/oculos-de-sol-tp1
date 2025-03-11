@@ -80,7 +80,6 @@ public class OculosServiceimpl implements OculosService{
         oculosRepository.deleteById(id);
     }
 
-
     public List<OculosDTO> findByCor(String corOuId) {
         CorArmacao corArmacao;
 
