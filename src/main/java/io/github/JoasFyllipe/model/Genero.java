@@ -1,6 +1,7 @@
 package io.github.JoasFyllipe.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.github.JoasFyllipe.model.exceptions.GenderNotFoundException;
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Genero {
@@ -30,5 +31,21 @@ public enum Genero {
                 return g;
         }
         return null;
+    }
+
+    public static Genero fromNome(String nome){
+        for(Genero g: Genero.values()){
+            if(g.getNOME().equalsIgnoreCase(nome))
+                return g;
+        }
+        throw new GenderNotFoundException("Gênero não encontrada: " + nome);
+    }
+
+    public static Genero fromId(int id){
+        for(Genero g: Genero.values()){
+            if(g.getID() == id)
+                return g;
+        }
+        throw new GenderNotFoundException("Gênero não encontrada para o ID: "+ id);
     }
 }

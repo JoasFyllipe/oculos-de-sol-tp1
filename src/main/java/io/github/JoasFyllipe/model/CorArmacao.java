@@ -1,6 +1,7 @@
 package io.github.JoasFyllipe.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.github.JoasFyllipe.model.exceptions.ColorNotFoundException;
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum CorArmacao {
@@ -30,7 +31,7 @@ public enum CorArmacao {
             if(c.getNOME().equalsIgnoreCase(nome))
                 return c;
         }
-        throw new IllegalArgumentException("Cor não encontrada: " + nome);
+        throw new ColorNotFoundException("Cor não encontrada: " + nome);
     }
 
     public static CorArmacao fromId(int id){
@@ -38,7 +39,7 @@ public enum CorArmacao {
             if(c.getID() == id)
                 return c;
         }
-        throw new IllegalArgumentException("Cor não encontrada para o ID: "+ id);
+        throw new ColorNotFoundException("Cor não encontrada para o ID: "+ id);
     }
 
     public static CorArmacao valueOf(int id) {

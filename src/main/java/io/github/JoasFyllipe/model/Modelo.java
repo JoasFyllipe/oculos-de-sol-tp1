@@ -1,6 +1,7 @@
 package io.github.JoasFyllipe.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.github.JoasFyllipe.model.exceptions.ModelNotFoundException;
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Modelo {
@@ -31,4 +32,21 @@ public enum Modelo {
         }
         return null;
     }
+
+    public static Modelo fromNome(String nome){
+        for(Modelo m: Modelo.values()){
+            if(m.getNOME().equalsIgnoreCase(nome))
+                return m;
+        }
+        throw new ModelNotFoundException("Cor não encontrada: " + nome);
+    }
+
+    public static Modelo fromId(int id){
+        for(Modelo m: Modelo.values()){
+            if(m.getID() == id)
+                return m;
+        }
+        throw new ModelNotFoundException("Cor não encontrada para o ID: "+ id);
+    }
+
 }

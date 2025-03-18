@@ -5,11 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "oculos")
-public class Oculos {
-
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    public Long id;
+public class Oculos extends DefaultEntity {
 
     @Column(length = 60, nullable = false)
     public String nome;
@@ -20,17 +16,10 @@ public class Oculos {
     @Column(length = 60, nullable = false)
     public Integer quantidadeEstoque;
 
-    @Convert(converter = CorArmacaoConverter.class)
     private CorArmacao corArmacao;
-    @Enumerated(EnumType.ORDINAL)
     private Genero genero;
-    @Enumerated(EnumType.ORDINAL)
     private Modelo modelo;
 
-
-    public Long getId() {
-        return id;
-    }
 
     public CorArmacao getCorArmacao() {
         return corArmacao;
