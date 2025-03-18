@@ -1,11 +1,8 @@
 package io.github.JoasFyllipe.resource;
 
 import io.github.JoasFyllipe.dto.OculosDTO;
-import io.github.JoasFyllipe.model.CorArmacao;
 import io.github.JoasFyllipe.model.Oculos;
-import io.github.JoasFyllipe.repository.OculosRepository;
 import io.github.JoasFyllipe.service.OculosService;
-import io.github.JoasFyllipe.service.OculosServiceimpl;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -25,9 +22,19 @@ public class OculosResource {
         return oculosService.findAll();
     }
     @GET
-    @Path("{id}")
+    @Path("cor/{id}")
     public List<OculosDTO> buscarPorCor(@QueryParam("id") String corOuId){
         return oculosService.findByCor(corOuId);
+    }
+    @GET
+    @Path("genero/{id}")
+    public List<OculosDTO> buscarPorGenero(@QueryParam("id") String generoOuId){
+        return oculosService.findByGenero(generoOuId);
+    }
+    @GET
+    @Path("modelo/{id}")
+    public List<OculosDTO> buscarPorModelo(@QueryParam("id") String modeloOuId){
+        return oculosService.findByModelo(modeloOuId);
     }
 
     @POST
