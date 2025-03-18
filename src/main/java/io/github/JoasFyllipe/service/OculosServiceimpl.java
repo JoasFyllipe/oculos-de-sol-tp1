@@ -93,4 +93,31 @@ public class OculosServiceimpl implements OculosService{
         return  oculosRepository.findByCor(corArmacao).stream().map(OculosDTO::new).toList();
     }
 
+    @Override
+    public List<OculosDTO> findByGenero(String corOuId) {
+        Genero genero;
+
+        try{
+            int id = Integer.parseInt(corOuId);
+            genero = Genero.fromId(id);
+        }
+        catch (NumberFormatException e){
+            genero = Genero.fromNome(corOuId);
+        }
+        return oculosRepository.findByGenero(genero).stream().map(OculosDTO::new).toList();
+    }
+
+    @Override
+    public List<OculosDTO> findByModelo(String corOuId) {
+        Modelo modelo;
+
+        try {
+            int id = Integer.parseInt(corOuId);
+            modelo = Modelo.fromId(id);
+        } catch (NumberFormatException e) {
+            modelo = Modelo.fromNome(corOuId);
+        }
+        return oculosRepository.findByModelo(modelo).stream().map(OculosDTO::new).toList();
+    }
+
 }
