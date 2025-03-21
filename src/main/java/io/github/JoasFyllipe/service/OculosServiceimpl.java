@@ -1,6 +1,8 @@
 package io.github.JoasFyllipe.service;
 
 import io.github.JoasFyllipe.dto.OculosDTO;
+import io.github.JoasFyllipe.dto.OculosResponseDTO;
+import io.github.JoasFyllipe.exceptions.OculosNotFoundException;
 import io.github.JoasFyllipe.model.CorArmacao;
 import io.github.JoasFyllipe.model.Genero;
 import io.github.JoasFyllipe.model.Modelo;
@@ -21,39 +23,24 @@ public class OculosServiceimpl implements OculosService{
 
     @Override
     @Transactional
-    public Oculos create(OculosDTO oculos) {
+    public OculosResponseDTO create(OculosDTO oculos) {
         Oculos novoOculos = new Oculos();
         novoOculos.setNome(oculos.getNome());
         novoOculos.setValor(oculos.getValor());
         novoOculos.setQuantidadeEstoque(oculos.getQuantidadeEstoque());
 
-        CorArmacao corArmacao = null;
-        for(CorArmacao c: CorArmacao.values()){
-            if(c.getID() == oculos.getIdCorArmacao())
-                corArmacao = c;
-        }
-        Genero genero = null;
-        for(Genero g: Genero.values()){
-            if(g.getID() == oculos.getIdGenero())
-                genero = g;
-        }
-        Modelo modelo = null;
-        for(Modelo m: Modelo.values()){
-            if(m.getID() == oculos.getIdModelo())
-                modelo = m;
-        }
-        novoOculos.setCorArmacao(corArmacao);
-        novoOculos.setGenero(genero);
-        novoOculos.setModelo(modelo);
+        novoOculos.setCorArmacao(CorArmacao.valueOf(oculos.getIdCorArmacao()));
+        novoOculos.setGenero(Genero.valueOf(oculos.getIdGenero()));
+        novoOculos.setModelo(Modelo.valueOf(oculos.getIdModelo()));
 
         oculosRepository.persist(novoOculos);
 
-        return novoOculos;
+        return OculosResponseDTO.valueOf(novoOculos);
     }
 
     @Override
-    public List<Oculos> findAll() {
-        return oculosRepository.findAll().list();
+    public List<OculosResponseDTO> findAll() {
+        return oculosRepository.findAll().stream().map(o -> OculosResponseDTO.valueOf(o)).toList();
     }
 
     @Override
@@ -70,7 +57,7 @@ public class OculosServiceimpl implements OculosService{
 
         }
         else{
-            throw new EntityNotFoundException("Óculos não encotnrado com o ID: "+id);
+            throw new OculosNotFoundException("Óculos não encotnrado com o ID: "+id);
         }
     }
 
@@ -80,7 +67,7 @@ public class OculosServiceimpl implements OculosService{
         oculosRepository.deleteById(id);
     }
 
-    public List<OculosDTO> findByCor(String corOuId) {
+    public List<OculosResponseDTO> findByCor(String corOuId) {
         CorArmacao corArmacao;
 
         try{
@@ -90,11 +77,11 @@ public class OculosServiceimpl implements OculosService{
         catch (NumberFormatException e){
             corArmacao = CorArmacao.fromNome(corOuId);
         }
-        return  oculosRepository.findByCor(corArmacao).stream().map(OculosDTO::new).toList();
+        return  oculosRepository.findByCor(corArmacao).stream().map(OculosResponseDTO::valueOf).toList();
     }
 
     @Override
-    public List<OculosDTO> findByGenero(String corOuId) {
+    public List<OculosResponseDTO> findByGenero(String corOuId) {
         Genero genero;
 
         try{
@@ -104,11 +91,11 @@ public class OculosServiceimpl implements OculosService{
         catch (NumberFormatException e){
             genero = Genero.fromNome(corOuId);
         }
-        return oculosRepository.findByGenero(genero).stream().map(OculosDTO::new).toList();
+        return oculosRepository.findByGenero(genero).stream().map(OculosResponseDTO::valueOf).toList();
     }
 
     @Override
-    public List<OculosDTO> findByModelo(String corOuId) {
+    public List<OculosResponseDTO> findByModelo(String corOuId) {
         Modelo modelo;
 
         try {
@@ -117,7 +104,7 @@ public class OculosServiceimpl implements OculosService{
         } catch (NumberFormatException e) {
             modelo = Modelo.fromNome(corOuId);
         }
-        return oculosRepository.findByModelo(modelo).stream().map(OculosDTO::new).toList();
+        return oculosRepository.findByModelo(modelo).stream().map(OculosResponseDTO::valueOf).toList();
     }
 
 }
