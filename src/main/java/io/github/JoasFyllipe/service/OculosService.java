@@ -1,17 +1,17 @@
 package io.github.JoasFyllipe.service;
 
 import io.github.JoasFyllipe.dto.OculosDTO;
-import io.github.JoasFyllipe.model.Oculos;
+import io.github.JoasFyllipe.dto.OculosResponseDTO;
 
 import java.util.List;
 
 public interface OculosService {
 
-    Oculos create(OculosDTO oculos);
-    List<Oculos> findAll();
+    OculosResponseDTO create(OculosDTO oculos);
+    List<OculosResponseDTO> findAll();
     void update(Long id, OculosDTO oculosDTO);
     void delete(Long id);
-    List<OculosDTO> findByCor(String corOuId);
-    List<OculosDTO> findByGenero(String generoOuId);
-    List<OculosDTO> findByModelo(String modeloOuId);
+    List<OculosResponseDTO> findByCor(String corOuId);
+    List<OculosResponseDTO> findByGenero(String generoOuId);
+    List<OculosResponseDTO> findByModelo(String modeloOuId);
 }
