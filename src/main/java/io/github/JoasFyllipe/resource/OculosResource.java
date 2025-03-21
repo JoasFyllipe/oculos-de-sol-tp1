@@ -1,6 +1,7 @@
 package io.github.JoasFyllipe.resource;
 
 import io.github.JoasFyllipe.dto.OculosDTO;
+import io.github.JoasFyllipe.dto.OculosResponseDTO;
 import io.github.JoasFyllipe.model.Oculos;
 import io.github.JoasFyllipe.service.OculosService;
 import jakarta.inject.Inject;
@@ -18,27 +19,27 @@ public class OculosResource {
     OculosService oculosService;
 
     @GET
-    public List<Oculos> buscarTodos(){
+    public List<OculosResponseDTO> buscarTodos(){
         return oculosService.findAll();
     }
     @GET
     @Path("cor/{id}")
-    public List<OculosDTO> buscarPorCor(@QueryParam("id") String corOuId){
+    public List<OculosResponseDTO> buscarPorCor(@QueryParam("id") String corOuId){
         return oculosService.findByCor(corOuId);
     }
     @GET
     @Path("genero/{id}")
-    public List<OculosDTO> buscarPorGenero(@QueryParam("id") String generoOuId){
+    public List<OculosResponseDTO> buscarPorGenero(@QueryParam("id") String generoOuId){
         return oculosService.findByGenero(generoOuId);
     }
     @GET
     @Path("modelo/{id}")
-    public List<OculosDTO> buscarPorModelo(@QueryParam("id") String modeloOuId){
+    public List<OculosResponseDTO> buscarPorModelo(@QueryParam("id") String modeloOuId){
         return oculosService.findByModelo(modeloOuId);
     }
 
     @POST
-    public Oculos adicionarOculos(OculosDTO oculosDTO){
+    public OculosResponseDTO adicionarOculos(OculosDTO oculosDTO){
         return oculosService.create(oculosDTO);
     }
 
@@ -53,6 +54,5 @@ public class OculosResource {
     public void deletarOculos(@PathParam("id") Long id){
         oculosService.delete(id);
     }
-
 
 }
