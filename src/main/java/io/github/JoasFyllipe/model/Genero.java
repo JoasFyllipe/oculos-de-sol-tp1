@@ -1,7 +1,7 @@
 package io.github.JoasFyllipe.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import io.github.JoasFyllipe.model.exceptions.GenderNotFoundException;
+import io.github.JoasFyllipe.exceptions.GenderNotFoundException;
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Genero {

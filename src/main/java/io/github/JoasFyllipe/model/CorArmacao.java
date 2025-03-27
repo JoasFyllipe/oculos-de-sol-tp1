@@ -1,7 +1,7 @@
 package io.github.JoasFyllipe.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import io.github.JoasFyllipe.model.exceptions.ColorNotFoundException;
+import io.github.JoasFyllipe.exceptions.ColorNotFoundException;
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum CorArmacao {

@@ -1,6 +1,5 @@
 package io.github.JoasFyllipe.model;
 
-import io.github.JoasFyllipe.model.converterjpa.CorArmacaoConverter;
 import jakarta.persistence.*;
 
 @Entity
@@ -20,6 +19,9 @@ public class Oculos extends DefaultEntity {
     private Genero genero;
     private Modelo modelo;
 
+    @ManyToOne
+    @JoinColumn(name="id_marca")
+    private Marca marca;
 
     public CorArmacao getCorArmacao() {
         return corArmacao;
