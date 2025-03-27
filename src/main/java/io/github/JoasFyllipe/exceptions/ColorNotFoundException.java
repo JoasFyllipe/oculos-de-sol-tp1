@@ -1,4 +1,4 @@
-package io.github.JoasFyllipe.model.exceptions;
+package io.github.JoasFyllipe.exceptions;
 
 public class ColorNotFoundException extends RuntimeException{
 
