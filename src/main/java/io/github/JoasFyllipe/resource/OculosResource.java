@@ -38,6 +38,12 @@ public class OculosResource {
         return oculosService.findByModelo(modeloOuId);
     }
 
+    @GET
+    @Path("marca/{id}")
+    public List<OculosResponseDTO> buscarPorMarca(@QueryParam("id") String marcaOuId){
+        return oculosService.findByMarca(marcaOuId);
+    }
+
     @POST
     public OculosResponseDTO adicionarOculos(OculosDTO oculosDTO){
         return oculosService.create(oculosDTO);
