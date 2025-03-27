@@ -3,14 +3,11 @@ package io.github.JoasFyllipe.service;
 import io.github.JoasFyllipe.dto.OculosDTO;
 import io.github.JoasFyllipe.dto.OculosResponseDTO;
 import io.github.JoasFyllipe.exceptions.OculosNotFoundException;
-import io.github.JoasFyllipe.model.CorArmacao;
-import io.github.JoasFyllipe.model.Genero;
-import io.github.JoasFyllipe.model.Modelo;
-import io.github.JoasFyllipe.model.Oculos;
+import io.github.JoasFyllipe.model.*;
+import io.github.JoasFyllipe.repository.MarcaRepository;
 import io.github.JoasFyllipe.repository.OculosRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 
 import java.util.List;
@@ -21,17 +18,20 @@ public class OculosServiceimpl implements OculosService{
     @Inject
     OculosRepository oculosRepository;
 
+    @Inject
+    MarcaRepository marcaRepository;
+
     @Override
     @Transactional
     public OculosResponseDTO create(OculosDTO oculos) {
         Oculos novoOculos = new Oculos();
-        novoOculos.setNome(oculos.getNome());
-        novoOculos.setValor(oculos.getValor());
-        novoOculos.setQuantidadeEstoque(oculos.getQuantidadeEstoque());
+        novoOculos.setNome(oculos.nome());
+        novoOculos.setValor(oculos.valor());
+        novoOculos.setQuantidadeEstoque(oculos.quantidadeEstoque());
 
-        novoOculos.setCorArmacao(CorArmacao.valueOf(oculos.getIdCorArmacao()));
-        novoOculos.setGenero(Genero.valueOf(oculos.getIdGenero()));
-        novoOculos.setModelo(Modelo.valueOf(oculos.getIdModelo()));
+        novoOculos.setCorArmacao(CorArmacao.valueOf(oculos.idCorArmacao()));
+        novoOculos.setGenero(Genero.valueOf(oculos.idGenero()));
+        novoOculos.setModelo(Modelo.valueOf(oculos.idModelo()));
 
         oculosRepository.persist(novoOculos);
 
@@ -49,11 +49,11 @@ public class OculosServiceimpl implements OculosService{
         Oculos oculos = oculosRepository.findById(id);
 
         if(oculos != null) {
-            oculos.setNome(oculosDTO.getNome());
-            oculos.setValor(oculosDTO.getValor());
-            oculos.setCorArmacao(CorArmacao.valueOf(oculosDTO.getIdCorArmacao()));
-            oculos.setGenero(Genero.valueOf(oculosDTO.getIdGenero()));
-            oculos.setModelo(Modelo.valueOf(oculosDTO.getIdModelo()));
+            oculos.setNome(oculosDTO.nome());
+            oculos.setValor(oculosDTO.valor());
+            oculos.setCorArmacao(CorArmacao.valueOf(oculosDTO.idCorArmacao()));
+            oculos.setGenero(Genero.valueOf(oculosDTO.idGenero()));
+            oculos.setModelo(Modelo.valueOf(oculosDTO.idModelo()));
 
         }
         else{
@@ -105,6 +105,19 @@ public class OculosServiceimpl implements OculosService{
             modelo = Modelo.fromNome(corOuId);
         }
         return oculosRepository.findByModelo(modelo).stream().map(OculosResponseDTO::valueOf).toList();
+    }
+
+    @Override
+    public List<OculosResponseDTO> findByMarca(String marcaOuId) {
+        Marca marca;
+
+        try {
+            Long id = Long.parseLong(marcaOuId);
+            marca = Marca.fromId(id, marcaRepository.listAll());
+        } catch (NumberFormatException e) {
+            marca = Marca.fromNome(marcaOuId, marcaRepository.listAll());
+        }
+        return oculosRepository.findByMarca(marca).stream().map(OculosResponseDTO::valueOf).toList();
     }
 
 }
