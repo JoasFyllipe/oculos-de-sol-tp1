@@ -1,9 +1,6 @@
 package io.github.JoasFyllipe.dto;
 
-import io.github.JoasFyllipe.model.CorArmacao;
-import io.github.JoasFyllipe.model.Genero;
-import io.github.JoasFyllipe.model.Modelo;
-import io.github.JoasFyllipe.model.Oculos;
+import io.github.JoasFyllipe.model.*;
 
 public record OculosResponseDTO(
         Long id,
@@ -12,7 +9,8 @@ public record OculosResponseDTO(
         Integer quantidadeEstoque,
         CorArmacao corArmacao,
         Genero genero,
-        Modelo modelo) {
+        Modelo modelo,
+        MarcaResponseDTO marca) {
 
 
     public static OculosResponseDTO valueOf(Oculos oculos){
@@ -26,6 +24,8 @@ public record OculosResponseDTO(
                 oculos.getQuantidadeEstoque(),
                 oculos.getCorArmacao(),
                 oculos.getGenero(),
-                oculos.getModelo());
+                oculos.getModelo(),
+                MarcaResponseDTO.valueOf(oculos.getMarca())
+        );
     }
 }

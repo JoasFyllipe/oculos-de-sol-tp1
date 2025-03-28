@@ -15,4 +15,5 @@ public interface OculosService {
     List<OculosResponseDTO> findByGenero(String generoOuId);
     List<OculosResponseDTO> findByModelo(String modeloOuId);
     List<OculosResponseDTO> findByMarca(String marcaOuId);
+    OculosResponseDTO findById(Long id);
 }

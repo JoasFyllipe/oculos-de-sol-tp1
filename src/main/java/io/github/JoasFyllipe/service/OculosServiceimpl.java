@@ -1,5 +1,6 @@
 package io.github.JoasFyllipe.service;
 
+import io.github.JoasFyllipe.dto.MarcaResponseDTO;
 import io.github.JoasFyllipe.dto.OculosDTO;
 import io.github.JoasFyllipe.dto.OculosResponseDTO;
 import io.github.JoasFyllipe.exceptions.OculosNotFoundException;
@@ -33,6 +34,10 @@ public class OculosServiceimpl implements OculosService{
         novoOculos.setGenero(Genero.valueOf(oculos.idGenero()));
         novoOculos.setModelo(Modelo.valueOf(oculos.idModelo()));
 
+        Marca marca = marcaRepository.findById(Long.valueOf(oculos.idMarca()));
+
+        novoOculos.setMarca(marca);
+
         oculosRepository.persist(novoOculos);
 
         return OculosResponseDTO.valueOf(novoOculos);
@@ -54,6 +59,9 @@ public class OculosServiceimpl implements OculosService{
             oculos.setCorArmacao(CorArmacao.valueOf(oculosDTO.idCorArmacao()));
             oculos.setGenero(Genero.valueOf(oculosDTO.idGenero()));
             oculos.setModelo(Modelo.valueOf(oculosDTO.idModelo()));
+            
+            Marca marca = marcaRepository.findById(Long.valueOf(oculosDTO.idMarca()));
+            oculos.setMarca(marca);
 
         }
         else{
@@ -118,6 +126,16 @@ public class OculosServiceimpl implements OculosService{
             marca = Marca.fromNome(marcaOuId, marcaRepository.listAll());
         }
         return oculosRepository.findByMarca(marca).stream().map(OculosResponseDTO::valueOf).toList();
+    }
+
+    @Override
+    public OculosResponseDTO findById(Long id) {
+        OculosResponseDTO oculos = OculosResponseDTO.valueOf(oculosRepository.findById(id));
+
+        if(oculos == null){
+            throw new OculosNotFoundException("Oculos não encontrado para o Id: "+ id);
+        }
+        return oculos;
     }
 
 }

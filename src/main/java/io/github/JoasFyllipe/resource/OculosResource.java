@@ -37,6 +37,11 @@ public class OculosResource {
     public List<OculosResponseDTO> buscarPorModelo(@QueryParam("id") String modeloOuId){
         return oculosService.findByModelo(modeloOuId);
     }
+    @GET
+    @Path("{id}")
+    public OculosResponseDTO buscarPorId(Long id){
+        return oculosService.findById(id);
+    }
 
     @GET
     @Path("marca/{id}")

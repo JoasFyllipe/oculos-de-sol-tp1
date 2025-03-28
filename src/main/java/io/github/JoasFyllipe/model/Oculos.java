@@ -23,6 +23,13 @@ public class Oculos extends DefaultEntity {
     @JoinColumn(name="id_marca")
     private Marca marca;
 
+    public Marca getMarca(){
+        return marca;
+    }
+    public void setMarca(Marca marca){
+        this.marca = marca;
+    }
+
     public CorArmacao getCorArmacao() {
         return corArmacao;
     }

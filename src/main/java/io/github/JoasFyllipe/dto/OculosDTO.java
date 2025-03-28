@@ -6,7 +6,8 @@ public record OculosDTO (
         Integer quantidadeEstoque,
         Integer idCorArmacao,
         Integer idGenero,
-        Integer idModelo){
+        Integer idModelo,
+        Long idMarca){
 
 }
 
