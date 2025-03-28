@@ -5,6 +5,7 @@ import io.github.JoasFyllipe.dto.OculosResponseDTO;
 import io.github.JoasFyllipe.model.Oculos;
 import io.github.JoasFyllipe.service.OculosService;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
@@ -38,8 +39,8 @@ public class OculosResource {
         return oculosService.findByModelo(modeloOuId);
     }
     @GET
-    @Path("{id}")
-    public OculosResponseDTO buscarPorId(Long id){
+    @Path("/{id}")
+    public OculosResponseDTO buscarPorId(@PathParam("id") Long id){
         return oculosService.findById(id);
     }
 
@@ -56,6 +57,7 @@ public class OculosResource {
 
     @PUT
     @Path("{id}")
+    @Transactional
     public void atualizarOculos(@PathParam("id") Long id, OculosDTO oculosDTO){
         oculosService.update(id, oculosDTO);
     }

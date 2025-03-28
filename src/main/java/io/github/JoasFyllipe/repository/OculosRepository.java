@@ -22,7 +22,4 @@ public class OculosRepository implements PanacheRepository<Oculos> {
     public List<Oculos> findByMarca(Marca marca){
         return list("marca", marca);
     }
-    public Oculos findById(Long id){
-        return findById(id);
-    }
 }

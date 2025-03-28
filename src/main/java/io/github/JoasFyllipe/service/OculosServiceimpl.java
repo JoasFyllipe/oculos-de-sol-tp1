@@ -130,12 +130,12 @@ public class OculosServiceimpl implements OculosService{
 
     @Override
     public OculosResponseDTO findById(Long id) {
-        OculosResponseDTO oculos = OculosResponseDTO.valueOf(oculosRepository.findById(id));
+        Oculos oculos = oculosRepository.findById(id);
 
         if(oculos == null){
             throw new OculosNotFoundException("Oculos não encontrado para o Id: "+ id);
         }
-        return oculos;
+        return OculosResponseDTO.valueOf(oculos);
     }
 
 }

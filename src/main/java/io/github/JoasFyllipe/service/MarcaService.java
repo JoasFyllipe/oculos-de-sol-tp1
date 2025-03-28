@@ -9,7 +9,8 @@ public interface MarcaService{
 
     MarcaResponseDTO create(MarcaDTO marcaDTO);
     void update(Long id, MarcaDTO marcaDTO);
+    void delete(Long id);
     MarcaResponseDTO findById(Long id);
-    List<MarcaResponseDTO> findByNome(String nome);
+    MarcaResponseDTO findByNome(String nome);
     List<MarcaResponseDTO> findAll();
 }

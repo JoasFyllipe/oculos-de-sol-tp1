@@ -11,7 +11,7 @@ public record MarcaResponseDTO (
             return null;
         return new MarcaResponseDTO(
                 marca.getId(),
-                marca.getName());
+                marca.getNome());
     }
 
 }
