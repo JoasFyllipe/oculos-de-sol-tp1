@@ -6,7 +6,7 @@ Este projeto é uma API REST desenvolvida em **Java 21** com o **Quarkus**, volt
 
 Abaixo está o diagrama de classes que representa toda a estrutura do projeto:
 
-![Diagrama UML](oculos-de-sol-tp1\docs\modelagem.png)
+![Diagrama UML](docs/modelagem.png)
 
 
 
