@@ -4,7 +4,7 @@ Este projeto é uma API REST desenvolvida em **Java 21** com o **Quarkus**, volt
 
 ## 📊 Diagrama de Classes (UML)
 
-Abaixo está o diagrama de classes que representa toda a estrutura do projeto:
+Abaixo está o diagrama de classes que representa uma parte da estrutura do projeto:
 
 ![Diagrama UML](docs/modelagem.png)
 
