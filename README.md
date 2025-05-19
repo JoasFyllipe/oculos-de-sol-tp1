@@ -38,12 +38,12 @@ Execute os comandos abaixo no terminal para rodar o projeto em modo de desenvolv
 
 Clona o repositório do GitHub para sua máquina:
 ```bash
-git clone https://github.com/seu-usuario/oculos-ecommerce-api.git
+git clone https://github.com/JoasFyllipe/oculos-de-sol-tp1.git
 ```
 
 Entra na pasta do projeto:
 ```bash
-cd oculos-ecommerce-api
+cd oculos-de-sol-tp1
 ```
 Inicia o Quarkus em modo de desenvolvimento com hot reload?
 ```bash
