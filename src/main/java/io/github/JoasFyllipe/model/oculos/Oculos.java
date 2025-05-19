@@ -1,6 +1,15 @@
-package io.github.JoasFyllipe.model;
+package io.github.JoasFyllipe.model.oculos;
 
-import jakarta.persistence.*;
+import io.github.JoasFyllipe.model.defaultentity.DefaultEntity;
+import io.github.JoasFyllipe.model.enums.CorArmacao;
+import io.github.JoasFyllipe.model.enums.Genero;
+import io.github.JoasFyllipe.model.enums.Modelo;
+import io.github.JoasFyllipe.model.marca.Marca;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "oculos")
@@ -22,6 +31,21 @@ public class Oculos extends DefaultEntity {
     @ManyToOne
     @JoinColumn(name="id_marca")
     private Marca marca;
+
+    // Construtor padrão
+    public Oculos() {
+    }
+
+    // Construtor com argumentos
+    public Oculos(String nome, Double valor, Integer quantidadeEstoque, CorArmacao corArmacao, Genero genero, Modelo modelo, Marca marca) {
+        this.nome = nome;
+        this.valor = valor;
+        this.quantidadeEstoque = quantidadeEstoque;
+        this.corArmacao = corArmacao;
+        this.genero = genero;
+        this.modelo = modelo;
+        this.marca = marca;
+    }
 
     public Marca getMarca(){
         return marca;

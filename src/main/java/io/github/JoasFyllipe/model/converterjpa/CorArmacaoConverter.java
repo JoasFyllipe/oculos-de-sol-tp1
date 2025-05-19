@@ -1,6 +1,6 @@
 package io.github.JoasFyllipe.model.converterjpa;
 
-import io.github.JoasFyllipe.model.CorArmacao;
+import io.github.JoasFyllipe.model.enums.CorArmacao;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 

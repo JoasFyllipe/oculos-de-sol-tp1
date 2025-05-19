@@ -1,4 +1,4 @@
-package io.github.JoasFyllipe.model;
+package io.github.JoasFyllipe.model.enums;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.github.JoasFyllipe.exceptions.GenderNotFoundException;

@@ -1,10 +1,12 @@
-package io.github.JoasFyllipe.model;
-
-import io.github.JoasFyllipe.exceptions.MarcaNotFoundException;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+package io.github.JoasFyllipe.model.marca;
 
 import java.util.List;
+import java.util.Objects;
+
+import io.github.JoasFyllipe.exceptions.MarcaNotFoundException;
+import io.github.JoasFyllipe.model.defaultentity.DefaultEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 
 @Entity
 public class Marca extends DefaultEntity {
@@ -30,7 +32,7 @@ public class Marca extends DefaultEntity {
 
     public static Marca fromId(Long id, List<Marca> marcas) {
         for (Marca m : marcas) {
-            if (m.getId() == id)
+            if (Objects.equals(m.getId(), id))
                 return m;
         }
         throw new MarcaNotFoundException("Marca não encontrada para o ID: " + id);

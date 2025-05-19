@@ -1,4 +1,4 @@
-package io.github.JoasFyllipe.model;
+package io.github.JoasFyllipe.model.defaultentity;
 
 import jakarta.persistence.*;
 

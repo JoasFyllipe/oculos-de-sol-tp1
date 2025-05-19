@@ -1,6 +1,6 @@
 package io.github.JoasFyllipe.model.converterjpa;
 
-import io.github.JoasFyllipe.model.Genero;
+import io.github.JoasFyllipe.model.enums.Genero;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
