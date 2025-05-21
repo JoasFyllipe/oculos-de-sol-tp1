@@ -1,4 +1,4 @@
-package io.github.JoasFyllipe.service;
+package io.github.JoasFyllipe.service.oculos;
 
 import io.github.JoasFyllipe.dto.oculos.OculosRequestDTO;
 import io.github.JoasFyllipe.dto.oculos.OculosResponseDTO;

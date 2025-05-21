@@ -1,4 +1,4 @@
-package io.github.JoasFyllipe.service;
+package io.github.JoasFyllipe.service.marca;
 
 import java.util.List;
 

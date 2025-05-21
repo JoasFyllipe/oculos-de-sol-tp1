@@ -1,6 +1,10 @@
 package io.github.JoasFyllipe.repository;
 
-import io.github.JoasFyllipe.model.*;
+import io.github.JoasFyllipe.model.enums.CorArmacao;
+import io.github.JoasFyllipe.model.enums.Genero;
+import io.github.JoasFyllipe.model.enums.Modelo;
+import io.github.JoasFyllipe.model.marca.Marca;
+import io.github.JoasFyllipe.model.oculos.Oculos;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 

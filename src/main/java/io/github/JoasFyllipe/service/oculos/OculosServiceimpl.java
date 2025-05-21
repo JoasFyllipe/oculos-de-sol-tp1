@@ -1,9 +1,13 @@
-package io.github.JoasFyllipe.service;
+package io.github.JoasFyllipe.service.oculos;
 
 import io.github.JoasFyllipe.dto.oculos.OculosRequestDTO;
 import io.github.JoasFyllipe.dto.oculos.OculosResponseDTO;
 import io.github.JoasFyllipe.exceptions.OculosNotFoundException;
-import io.github.JoasFyllipe.model.*;
+import io.github.JoasFyllipe.model.enums.CorArmacao;
+import io.github.JoasFyllipe.model.enums.Genero;
+import io.github.JoasFyllipe.model.enums.Modelo;
+import io.github.JoasFyllipe.model.marca.Marca;
+import io.github.JoasFyllipe.model.oculos.Oculos;
 import io.github.JoasFyllipe.repository.MarcaRepository;
 import io.github.JoasFyllipe.repository.OculosRepository;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -53,10 +57,10 @@ public class OculosServiceimpl implements OculosService {
      package io.github.JoasFyllipe.dto.oculos;
 
 import io.github.JoasFyllipe.dto.marca.MarcaRequestDTO;
-import io.github.JoasFyllipe.model.CorArmacao;
-import io.github.JoasFyllipe.model.Genero;
-import io.github.JoasFyllipe.model.Modelo;
-import io.github.JoasFyllipe.model.Oculos;
+import io.github.JoasFyllipe.model.enums.CorArmacao;
+import io.github.JoasFyllipe.model.enums.Genero;
+import io.github.JoasFyllipe.model.enums.Modelo;
+import io.github.JoasFyllipe.model.oculos.Oculos;
 
 
 public record OculosRequestDTO(

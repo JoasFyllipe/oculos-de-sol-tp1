@@ -1,11 +1,11 @@
-package io.github.JoasFyllipe.service;
+package io.github.JoasFyllipe.service.marca;
 
 import java.util.List;
 
 import io.github.JoasFyllipe.dto.marca.MarcaRequestDTO;
 import io.github.JoasFyllipe.dto.marca.MarcaResponseDTO;
 import io.github.JoasFyllipe.exceptions.MarcaNotFoundException;
-import io.github.JoasFyllipe.model.Marca;
+import io.github.JoasFyllipe.model.marca.Marca;
 import io.github.JoasFyllipe.repository.MarcaRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
