@@ -16,13 +16,13 @@ import jakarta.persistence.Table;
 public class Oculos extends DefaultEntity {
 
     @Column(length = 60, nullable = false)
-    public String nome;
+    private String nome;
 
     @Column(length = 60, nullable = false)
-    public Double valor;
+    private Double valor;
 
     @Column(length = 60, nullable = false)
-    public Integer quantidadeEstoque;
+    private Integer quantidadeEstoque;
 
     private CorArmacao corArmacao;
     private Genero genero;
