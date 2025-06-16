@@ -9,44 +9,43 @@ public enum Modelo {
     ESPORTIVO(2, "Esportivo"),
     RETRO(3, "Retrô");
 
-    private final int ID;
-    private final String NOME;
+    private final Integer id;
+    private final String label;
 
-    private Modelo(int id, String nome) {
-        this.ID = id;
-        this.NOME = nome;
+    Modelo(Integer id, String label) {
+        this.id = id;
+        this.label = label;
     }
 
-    public int getID() {
-        return ID;
+    public Integer getId() {
+        return id;
     }
 
-    public String getNOME() {
-        return NOME;
+    public String getLabel() {
+        return label;
     }
 
-    public static Modelo valueOf(int id){
-        for(Modelo m: Modelo.values()){
-            if(m.getID() == id)
-                return m;
+    public static Modelo valueOf(Integer id) {
+        if (id == null) {
+            throw new IllegalArgumentException("O ID do modelo não pode ser nulo.");
         }
-        return null;
+        for (Modelo m : Modelo.values()) {
+            if (m.getId().equals(id)) {
+                return m;
+            }
+        }
+        throw new IllegalArgumentException("ID de Modelo inválido: " + id);
     }
 
-    public static Modelo fromNome(String nome){
-        for(Modelo m: Modelo.values()){
-            if(m.getNOME().equalsIgnoreCase(nome))
+    public static Modelo fromNome(String nome) {
+        if (nome == null || nome.isBlank()) {
+            throw new IllegalArgumentException("O nome do modelo não pode ser nulo ou vazio.");
+        }
+        for (Modelo m : Modelo.values()) {
+            if (m.getLabel().equalsIgnoreCase(nome)) {
                 return m;
+            }
         }
         throw new ModelNotFoundException("Modelo não encontrado: " + nome);
     }
-
-    public static Modelo fromId(int id){
-        for(Modelo m: Modelo.values()){
-            if(m.getID() == id)
-                return m;
-        }
-        throw new ModelNotFoundException("Modelo não encontrado para o ID: "+ id);
-    }
-
 }

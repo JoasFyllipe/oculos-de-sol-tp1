@@ -1,0 +1,102 @@
+2025-06-16 02:11:48,703(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria lista de telefones.
+2025-06-16 02:11:48,934(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o próprio e-mail.
+2025-06-16 02:11:49,144(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com buscando suas próprias informações de cliente.
+2025-06-16 02:11:49,164(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria lista de endereços.
+2025-06-16 02:11:49,351(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o próprio CPF.
+2025-06-16 02:11:49,559(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria data de nascimento.
+2025-06-16 02:11:49,830(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria senha.
+2025-06-16 02:11:50,054(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o telefone específico de ID 1.
+2025-06-16 02:11:50,252(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o próprio nome.
+2025-06-16 02:11:50,291(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin executando findAll de clientes.
+2025-06-16 02:11:50,310(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin buscando cliente por nome: Test
+2025-06-16 02:11:50,322(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin buscando cliente por ID: 1
+2025-06-16 02:11:50,722(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Recebida nova solicitação de cadastro de cliente.
+2025-06-16 02:11:51,125(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m==================== TEST REPORT #4[39m ====================
+2025-06-16 02:11:51,125(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve lançar WebApplicationException para senha inválida failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:11:51,126(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve retornar um token quando o login for bem-sucedido failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:11:51,127(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve lançar WebApplicationException para usuário inválido failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:11:51,128(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AdminEndpointsTests#DELETE /{id} - Deve deletar um cliente por ID failed 
+[39m: org.mockito.exceptions.misusing.InvalidUseOfMatchersException: 
+Misplaced or misused argument matcher detected here:
+
+-> at io.github.JoasFyllipe.ClienteResourceTest$AdminEndpointsTests.testClienteFromFuncionario(ClienteResourceTest.java:231)
+
+You cannot use argument matchers outside of verification or stubbing.
+Examples of correct usage of argument matchers:
+    when(mock.get(anyInt())).thenReturn(null);
+    doThrow(new RuntimeException()).when(mock).someVoidMethod(any());
+    verify(mock).someMethod(contains("foo"))
+
+This message may appear after an NullPointerException if the last matcher is returning an object 
+like any() but the stubbed method signature expect a primitive argument, in this case,
+use primitive alternatives.
+    when(mock.get(any())); // bad use, will raise NPE
+    when(mock.get(anyInt())); // correct usage use
+
+Also, this error might show up because you use argument matchers with methods that cannot be mocked.
+Following methods *cannot* be stubbed/verified: final/private/equals()/hashCode().
+Mocking methods declared on non-public parent classes is not supported.
+
+	at io.github.JoasFyllipe.ClienteResourceTest.setup(ClienteResourceTest.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+2025-06-16 02:11:51,129(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AdminEndpointsTests#POST /from-funcionario/{email} - Deve criar um cliente a partir de um funcionário failed 
+[39m: java.lang.NoSuchMethodError: 'io.github.JoasFyllipe.model.usuario.Cliente io.github.JoasFyllipe.service.usuario.ClienteService.clienteFromFuncionario(java.lang.String)'
+	at io.github.JoasFyllipe.ClienteResourceTest$AdminEndpointsTests.testClienteFromFuncionario(ClienteResourceTest.java:231)
+
+2025-06-16 02:11:51,130(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m>>>>>>>>>>>>>>>>>>>> [91mSummary:[39m <<<<<<<<<<<<<<<<<<<<
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve lançar WebApplicationException para senha inválida[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve retornar um token quando o login for bem-sucedido[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve lançar WebApplicationException para usuário inválido[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+[91mAdminEndpointsTests#DELETE /{id} - Deve deletar um cliente por ID[39m 
+Misplaced or misused argument matcher detected here:
+
+-> at io.github.JoasFyllipe.ClienteResourceTest$AdminEndpointsTests.testClienteFromFuncionario(ClienteResourceTest.java:231)
+
+You cannot use argument matchers outside of verification or stubbing.
+Examples of correct usage of argument matchers:
+    when(mock.get(anyInt())).thenReturn(null);
+    doThrow(new RuntimeException()).when(mock).someVoidMethod(any());
+    verify(mock).someMethod(contains("foo"))
+
+This message may appear after an NullPointerException if the last matcher is returning an object 
+like any() but the stubbed method signature expect a primitive argument, in this case,
+use primitive alternatives.
+    when(mock.get(any())); // bad use, will raise NPE
+    when(mock.get(anyInt())); // correct usage use
+
+Also, this error might show up because you use argument matchers with methods that cannot be mocked.
+Following methods *cannot* be stubbed/verified: final/private/equals()/hashCode().
+Mocking methods declared on non-public parent classes is not supported.
+io.github.JoasFyllipe.ClienteResourceTest$AdminEndpointsTests#testClienteFromFuncionario(ClienteResourceTest.java:231) [91mAdminEndpointsTests#POST /from-funcionario/{email} - Deve criar um cliente a partir de um funcionário[39m 'io.github.JoasFyllipe.model.usuario.Cliente io.github.JoasFyllipe.service.usuario.ClienteService.clienteFromFuncionario(java.lang.String)'
+2025-06-16 02:11:51,131(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m>>>>>>>>>>>>>>>>>>>> [91m5 TESTS FAILED[39m <<<<<<<<<<<<<<<<<<<<

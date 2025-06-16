@@ -1,0 +1,17 @@
+2025-06-15 01:37:35,991(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-33)cannot find symbol
+  symbol:   method findAll()
+  location: variable enderecoService of type io.github.JoasFyllipe.service.endereco.EnderecoService, line 29 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/EnderecoResource.java
+2025-06-15 01:37:35,999(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-33)method findById in interface io.github.JoasFyllipe.service.endereco.EnderecoService cannot be applied to given types;
+  required: java.lang.String,java.lang.Long
+  found:    java.lang.Long
+  reason: actual and formal argument lists differ in length, line 35 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/EnderecoResource.java
+2025-06-15 01:37:36,004(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-33)incompatible types: java.lang.Long cannot be converted to java.lang.String, line 44 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/EnderecoResource.java
+2025-06-15 01:37:36,009(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-33)method update in interface io.github.JoasFyllipe.service.endereco.EnderecoService cannot be applied to given types;
+  required: java.lang.String,java.lang.Long,io.github.JoasFyllipe.dto.endereco.EnderecoRequestDTO
+  found:    java.lang.Long,io.github.JoasFyllipe.dto.endereco.EnderecoRequestDTO
+  reason: actual and formal argument lists differ in length, line 54 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/EnderecoResource.java
+2025-06-15 01:37:36,018(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-33)method delete in interface io.github.JoasFyllipe.service.endereco.EnderecoService cannot be applied to given types;
+  required: java.lang.String,java.lang.Long
+  found:    java.lang.Long
+  reason: actual and formal argument lists differ in length, line 60 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/EnderecoResource.java
+2025-06-15 01:37:36,021(dd-MM-yyyy HH:mm:ss) WARN  [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-33)Some messages have been simplified; recompile with -Xdiags:verbose to get full output, line -1 in [unknown source]

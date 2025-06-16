@@ -5,11 +5,8 @@ import io.github.JoasFyllipe.model.enums.CorArmacao;
 import io.github.JoasFyllipe.model.enums.Genero;
 import io.github.JoasFyllipe.model.enums.Modelo;
 import io.github.JoasFyllipe.model.marca.Marca;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "oculos")
@@ -18,40 +15,50 @@ public class Oculos extends DefaultEntity {
     @Column(length = 60, nullable = false)
     private String nome;
 
-    @Column(length = 60, nullable = false)
-    private Double valor;
+    @Column(precision = 10, scale = 2, nullable = false)
+    private BigDecimal preco; // Renomeado de 'valor' para 'preco' por clareza
 
-    @Column(length = 60, nullable = false)
+    @Column(nullable = false)
     private Integer quantidadeEstoque;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private CorArmacao corArmacao;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Genero genero;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Modelo modelo;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name="id_marca")
     private Marca marca;
 
-    // Construtor padrão
-    public Oculos() {
+
+    public BigDecimal getPreco() {
+        return preco;
+    }
+    public void setPreco(BigDecimal preco) {
+        this.preco = preco;
     }
 
-    // Construtor com argumentos
-    public Oculos(String nome, Double valor, Integer quantidadeEstoque, CorArmacao corArmacao, Genero genero, Modelo modelo, Marca marca) {
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
         this.nome = nome;
-        this.valor = valor;
-        this.quantidadeEstoque = quantidadeEstoque;
-        this.corArmacao = corArmacao;
-        this.genero = genero;
-        this.modelo = modelo;
-        this.marca = marca;
     }
 
-    public Marca getMarca(){
-        return marca;
+    public Integer getQuantidadeEstoque() {
+        return quantidadeEstoque;
     }
-    public void setMarca(Marca marca){
-        this.marca = marca;
+
+    public void setQuantidadeEstoque(Integer quantidadeEstoque) {
+        this.quantidadeEstoque = quantidadeEstoque;
     }
 
     public CorArmacao getCorArmacao() {
@@ -78,27 +85,11 @@ public class Oculos extends DefaultEntity {
         this.modelo = modelo;
     }
 
-    public String getNome() {
-        return nome;
+    public Marca getMarca() {
+        return marca;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Double getValor() {
-        return valor;
-    }
-
-    public void setValor(Double valor) {
-        this.valor = valor;
-    }
-
-    public Integer getQuantidadeEstoque() {
-        return quantidadeEstoque;
-    }
-
-    public void setQuantidadeEstoque(Integer quantidadeEstoque) {
-        this.quantidadeEstoque = quantidadeEstoque;
+    public void setMarca(Marca marca) {
+        this.marca = marca;
     }
 }

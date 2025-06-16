@@ -9,7 +9,7 @@ public class ModeloConverter implements AttributeConverter<Modelo, Integer> {
     
     @Override
     public Integer convertToDatabaseColumn(Modelo modelo) {
-        return modelo == null ? null : modelo.getID();
+        return modelo == null ? null : modelo.getId();
     }
 
     @Override

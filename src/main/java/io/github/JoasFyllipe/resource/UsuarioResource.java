@@ -4,11 +4,14 @@ import io.github.JoasFyllipe.dto.usuario.UsuarioRequestDTO;
 import io.github.JoasFyllipe.dto.usuario.UsuarioResponseDTO;
 import io.github.JoasFyllipe.dto.usuario.UsuarioUpdateRequestDTO;
 import io.github.JoasFyllipe.service.usuario.UsuarioService;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import org.jboss.logging.Logger; // CORRIGIDO: Usando o Logger do JBoss, mais idiomático no Quarkus.
+
 import java.net.URI;
 import java.util.List;
 
@@ -17,37 +20,36 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 public class UsuarioResource {
 
+    private static final Logger LOG = Logger.getLogger(UsuarioResource.class);
+
     @Inject
     UsuarioService usuarioService;
 
     @GET
-    public List<UsuarioResponseDTO> buscarTodos() {
-        return usuarioService.findAll();
+    @RolesAllowed({"ADM"})
+    public Response findAll() {
+        LOG.info("Execução do método findAll");
+        List<UsuarioResponseDTO> usuarios = usuarioService.findAll();
+        LOG.infof("Foram encontrados %d usuários.", usuarios.size());
+        return Response.ok(usuarios).build();
     }
 
     @GET
     @Path("/{id}")
-    public UsuarioResponseDTO buscarPorId(@PathParam("id") Long id) {
-        return usuarioService.findById(id);
-    }
-
-    @POST
-    public Response adicionarUsuario(UsuarioRequestDTO usuarioDTO) {
-        UsuarioResponseDTO usuario = usuarioService.create(usuarioDTO);
-        URI location = URI.create("/usuarios/" + usuario.id());
-        return Response.created(location).entity(usuario).build();
-    }
-
-    @PUT
-    @Path("{id}")
-    @Transactional
-    public void atualizarUsuario(@PathParam("id") Long id, UsuarioUpdateRequestDTO usuarioDTO) {
-        usuarioService.update(id, usuarioDTO);
+    @RolesAllowed({"ADM"})
+    public Response findById(@PathParam("id") Long id) {
+        LOG.infof("Execução do método findById para o id: %d", id);
+        return Response.ok(usuarioService.findById(id)).build();
     }
 
     @DELETE
-    @Path("{id}")
-    public void deletarUsuario(@PathParam("id") Long id) {
+    @Path("/{id}")
+    @Transactional
+    @RolesAllowed("ADM")
+    public Response deletarUsuario(@PathParam("id") Long id) {
+        LOG.infof("Execução do método deletarUsuario para o id: %d", id);
         usuarioService.delete(id);
+        LOG.info("Usuário deletado com sucesso.");
+        return Response.noContent().build();
     }
 }

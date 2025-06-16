@@ -8,15 +8,21 @@ import io.github.JoasFyllipe.model.usuario.Usuario;
 @ApplicationScoped
 public class UsuarioRepository implements PanacheRepository<Usuario> {
 
-    public Usuario findByNome(String nome) {
-        return find("nome", nome).firstResult();
+    public Usuario findByCpf(String cpf) {
+        return find("cpf", cpf).firstResult();
     }
 
-    public List<Usuario> findByEmail(String email) {
-        return list("email", email);
+    public Usuario findByUsername(String username) {
+        return find("username", username).firstResult();
     }
 
-    public List<Usuario> findByIdade(int idade) {
-        return list("idade", idade);
+    public Usuario findByEmail(String email){
+        return find("email", email).firstResult();
     }
+
+    public Usuario findByEmailAndSenha(String email, String senha) {
+        return find("email = ?1 and senha = ?2", email, senha).firstResult();
+    }
+
+
 }

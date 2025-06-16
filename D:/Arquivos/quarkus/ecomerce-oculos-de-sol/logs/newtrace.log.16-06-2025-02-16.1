@@ -1,0 +1,45 @@
+2025-06-16 02:14:00,213(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para buscar cidades do estado de id: 1
+2025-06-16 02:14:00,237(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para listar todas as cidades.
+2025-06-16 02:14:00,250(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para buscar cidade por id: 1
+2025-06-16 02:14:00,262(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para criar nova cidade: Palmas
+2025-06-16 02:14:00,264(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Cidade criada com sucesso, id: 1
+2025-06-16 02:14:00,274(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para deletar cidade de id: 1
+2025-06-16 02:14:00,275(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Cidade deletada com sucesso.
+2025-06-16 02:14:00,284(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para atualizar cidade de id: 1
+2025-06-16 02:14:00,285(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Cidade atualizada com sucesso.
+2025-06-16 02:14:00,310(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m==================== TEST REPORT #6[39m ====================
+2025-06-16 02:14:00,310(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve lançar WebApplicationException para senha inválida failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:14:00,311(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve retornar um token quando o login for bem-sucedido failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:14:00,312(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve lançar WebApplicationException para usuário inválido failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:14:00,314(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m>>>>>>>>>>>>>>>>>>>> [91mSummary:[39m <<<<<<<<<<<<<<<<<<<<
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve lançar WebApplicationException para senha inválida[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve retornar um token quando o login for bem-sucedido[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve lançar WebApplicationException para usuário inválido[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+2025-06-16 02:14:00,315(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m>>>>>>>>>>>>>>>>>>>> [91m3 TESTS FAILED[39m <<<<<<<<<<<<<<<<<<<<

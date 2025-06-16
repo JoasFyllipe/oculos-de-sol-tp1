@@ -1,0 +1,3 @@
+2025-06-15 01:46:31,893(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (executor-thread-3)Requisição para listar todos os estados.
+2025-06-15 01:46:53,832(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (executor-thread-3)Requisição para criar nova cidade: São Paulo
+2025-06-15 01:46:53,893(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (executor-thread-3)Cidade criada com sucesso, id: 2

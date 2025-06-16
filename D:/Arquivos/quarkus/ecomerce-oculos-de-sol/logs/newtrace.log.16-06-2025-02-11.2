@@ -1,0 +1,42 @@
+2025-06-16 02:11:23,859(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin gerando cliente a partir do funcionário com e-mail: funcionario@email.com
+2025-06-16 02:11:23,940(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m==================== TEST REPORT #2[39m ====================
+2025-06-16 02:11:23,941(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve lançar WebApplicationException para senha inválida failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:11:23,942(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve retornar um token quando o login for bem-sucedido failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:11:23,943(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve lançar WebApplicationException para usuário inválido failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:11:23,944(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AdminEndpointsTests#POST /from-funcionario/{email} - Deve criar um cliente a partir de um funcionário failed 
+[39m: java.lang.ClassCastException: class io.github.JoasFyllipe.model.usuario.Cliente cannot be cast to class io.github.JoasFyllipe.dto.cliente.ClienteResponseDTO (io.github.JoasFyllipe.model.usuario.Cliente and io.github.JoasFyllipe.dto.cliente.ClienteResponseDTO are in unnamed module of loader io.quarkus.bootstrap.classloading.QuarkusClassLoader @48fba23a)
+	at io.github.JoasFyllipe.ClienteResourceTest$AdminEndpointsTests.testClienteFromFuncionario(ClienteResourceTest.java:245)
+
+2025-06-16 02:11:23,945(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m>>>>>>>>>>>>>>>>>>>> [91mSummary:[39m <<<<<<<<<<<<<<<<<<<<
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve lançar WebApplicationException para senha inválida[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve retornar um token quando o login for bem-sucedido[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve lançar WebApplicationException para usuário inválido[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+io.github.JoasFyllipe.ClienteResourceTest$AdminEndpointsTests#testClienteFromFuncionario(ClienteResourceTest.java:245) [91mAdminEndpointsTests#POST /from-funcionario/{email} - Deve criar um cliente a partir de um funcionário[39m class io.github.JoasFyllipe.model.usuario.Cliente cannot be cast to class io.github.JoasFyllipe.dto.cliente.ClienteResponseDTO (io.github.JoasFyllipe.model.usuario.Cliente and io.github.JoasFyllipe.dto.cliente.ClienteResponseDTO are in unnamed module of loader io.quarkus.bootstrap.classloading.QuarkusClassLoader @48fba23a)
+2025-06-16 02:11:23,946(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m>>>>>>>>>>>>>>>>>>>> [91m4 TESTS FAILED[39m <<<<<<<<<<<<<<<<<<<<

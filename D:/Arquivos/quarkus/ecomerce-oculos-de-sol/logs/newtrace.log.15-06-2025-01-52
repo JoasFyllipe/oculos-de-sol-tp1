@@ -1,0 +1,4 @@
+2025-06-15 01:52:17,269(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EnderecoResource] (executor-thread-3)Usuário maria@gmail.com solicitou a criação de um novo endereço.
+2025-06-15 01:52:17,512(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EnderecoResource] (executor-thread-3)Endereço com ID 4 criado com sucesso para o usuário: maria@gmail.com
+2025-06-15 01:52:23,324(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EnderecoResource] (executor-thread-3)Buscando todos os endereços para o usuário: maria@gmail.com
+2025-06-15 01:52:37,962(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (executor-thread-3)Requisição para listar todos os estados.

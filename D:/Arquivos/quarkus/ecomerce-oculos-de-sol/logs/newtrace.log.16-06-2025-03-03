@@ -1,0 +1,60 @@
+2025-06-16 03:03:49,048(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   class PagamentoCartao
+  location: class io.github.JoasFyllipe.service.pedido.PedidoServiceImpl, line 109 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,062(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   class PagamentoCartao
+  location: class io.github.JoasFyllipe.service.pedido.PedidoServiceImpl, line 109 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,067(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method set(io.github.JoasFyllipe.model.pedido.Pedido)
+  location: variable boleto of type io.github.JoasFyllipe.model.pagamento.Boleto, line 191 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,078(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)incompatible types: java.math.BigDecimal cannot be converted to java.lang.Double, line 192 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,080(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setDataVencimento(java.time.LocalDate)
+  location: variable boleto of type io.github.JoasFyllipe.model.pagamento.Boleto, line 193 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,083(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setCodigoDeBarras(java.lang.String)
+  location: variable boleto of type io.github.JoasFyllipe.model.pagamento.Boleto, line 194 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,085(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setPagamento(io.github.JoasFyllipe.model.pagamento.Boleto)
+  location: variable pedido of type io.github.JoasFyllipe.model.pedido.Pedido, line 196 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,107(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setPedido(io.github.JoasFyllipe.model.pedido.Pedido)
+  location: variable pix of type io.github.JoasFyllipe.model.pagamento.Pix, line 208 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,113(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)incompatible types: java.math.BigDecimal cannot be converted to java.lang.Double, line 209 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,115(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setDataExpiracao(java.time.LocalDateTime)
+  location: variable pix of type io.github.JoasFyllipe.model.pagamento.Pix, line 210 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,117(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setPagamento(io.github.JoasFyllipe.model.pagamento.Pix)
+  location: variable pedido of type io.github.JoasFyllipe.model.pedido.Pedido, line 213 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:49,120(dd-MM-yyyy HH:mm:ss) WARN  [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)Some messages have been simplified; recompile with -Xdiags:verbose to get full output, line -1 in [unknown source]
+2025-06-16 03:03:50,680(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   class PagamentoCartao
+  location: class io.github.JoasFyllipe.service.pedido.PedidoServiceImpl, line 109 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,681(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   class PagamentoCartao
+  location: class io.github.JoasFyllipe.service.pedido.PedidoServiceImpl, line 109 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,682(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method set(io.github.JoasFyllipe.model.pedido.Pedido)
+  location: variable boleto of type io.github.JoasFyllipe.model.pagamento.Boleto, line 191 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,683(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)incompatible types: java.math.BigDecimal cannot be converted to java.lang.Double, line 192 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,684(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setDataVencimento(java.time.LocalDate)
+  location: variable boleto of type io.github.JoasFyllipe.model.pagamento.Boleto, line 193 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,684(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setCodigoDeBarras(java.lang.String)
+  location: variable boleto of type io.github.JoasFyllipe.model.pagamento.Boleto, line 194 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,685(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setPagamento(io.github.JoasFyllipe.model.pagamento.Boleto)
+  location: variable pedido of type io.github.JoasFyllipe.model.pedido.Pedido, line 196 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,686(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setPedido(io.github.JoasFyllipe.model.pedido.Pedido)
+  location: variable pix of type io.github.JoasFyllipe.model.pagamento.Pix, line 208 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,687(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)incompatible types: java.math.BigDecimal cannot be converted to java.lang.Double, line 209 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,688(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setDataExpiracao(java.time.LocalDateTime)
+  location: variable pix of type io.github.JoasFyllipe.model.pagamento.Pix, line 210 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,689(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method setPagamento(io.github.JoasFyllipe.model.pagamento.Pix)
+  location: variable pedido of type io.github.JoasFyllipe.model.pedido.Pedido, line 213 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/pedido/PedidoServiceImpl.java
+2025-06-16 03:03:50,690(dd-MM-yyyy HH:mm:ss) WARN  [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)Some messages have been simplified; recompile with -Xdiags:verbose to get full output, line -1 in [unknown source]

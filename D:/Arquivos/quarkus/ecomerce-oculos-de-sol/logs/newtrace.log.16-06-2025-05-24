@@ -1,0 +1,66 @@
+2025-06-16 05:24:49,828(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaRequestDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 85 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:24:49,829(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaRequestDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 90 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:24:49,830(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 99 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:24:49,831(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 24 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/marca/MarcaServIceimpl.java
+2025-06-16 05:24:49,832(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 36 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/marca/MarcaServIceimpl.java
+2025-06-16 05:24:51,219(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method anyVararg()
+  location: class io.github.JoasFyllipe.resource.MarcaResourceTest, line 69 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:51,220(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method anyVararg()
+  location: class io.github.JoasFyllipe.resource.MarcaResourceTest, line 70 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:51,220(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method anyVararg()
+  location: class io.github.JoasFyllipe.resource.MarcaResourceTest, line 71 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:51,221(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method nome()
+  location: class io.github.JoasFyllipe.dto.marca.MarcaResponseDTO, line 102 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:51,222(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method nome()
+  location: variable result of type io.github.JoasFyllipe.dto.marca.MarcaResponseDTO, line 117 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:51,222(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getUsuarioEmail()
+  location: variable resource of type io.github.JoasFyllipe.resource.MarcaResource, line 255 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:51,681(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaRequestDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 85 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:24:51,682(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaRequestDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 90 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:24:51,682(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 99 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:24:51,683(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 24 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/marca/MarcaServIceimpl.java
+2025-06-16 05:24:51,684(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 36 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/marca/MarcaServIceimpl.java
+2025-06-16 05:24:53,039(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method anyVararg()
+  location: class io.github.JoasFyllipe.resource.MarcaResourceTest, line 69 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:53,040(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method anyVararg()
+  location: class io.github.JoasFyllipe.resource.MarcaResourceTest, line 70 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:53,040(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method anyVararg()
+  location: class io.github.JoasFyllipe.resource.MarcaResourceTest, line 71 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:53,041(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method nome()
+  location: class io.github.JoasFyllipe.dto.marca.MarcaResponseDTO, line 102 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:53,041(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method nome()
+  location: variable result of type io.github.JoasFyllipe.dto.marca.MarcaResponseDTO, line 117 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java
+2025-06-16 05:24:53,042(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getUsuarioEmail()
+  location: variable resource of type io.github.JoasFyllipe.resource.MarcaResource, line 255 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/test/java/io/github/JoasFyllipe/MarcaResourceTest.java

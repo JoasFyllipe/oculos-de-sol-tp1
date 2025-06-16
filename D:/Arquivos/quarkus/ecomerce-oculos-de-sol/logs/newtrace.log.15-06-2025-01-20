@@ -1,0 +1,2 @@
+2025-06-15 01:20:42,135(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (executor-thread-2)Requisição para listar todas as cidades.
+2025-06-15 01:20:51,961(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (executor-thread-2)Requisição para listar todos os estados.

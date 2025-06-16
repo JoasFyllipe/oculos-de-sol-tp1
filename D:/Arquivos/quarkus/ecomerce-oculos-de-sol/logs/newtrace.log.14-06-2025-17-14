@@ -1,0 +1,2 @@
+2025-06-14 17:14:56,485(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (executor-thread-4)Requisição para criar novo estado: Tocantins
+2025-06-14 17:14:57,328(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (executor-thread-4)Estado criado com sucesso, id: 1

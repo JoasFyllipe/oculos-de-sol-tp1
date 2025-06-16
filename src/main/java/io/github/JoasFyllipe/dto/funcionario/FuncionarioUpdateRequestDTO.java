@@ -1,21 +1,32 @@
 package io.github.JoasFyllipe.dto.funcionario;
 
+import io.github.JoasFyllipe.dto.endereco.EnderecoRequestDTO;
+import io.github.JoasFyllipe.dto.telefone.TelefoneRequestDTO;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+import java.math.BigDecimal; // Import para Salário
+import java.time.LocalDate;
+import java.util.List;
 
-public record FuncionarioUpdateRequestDTO (
-    @NotBlank(message = "O cargo não pode estar em branco.")
-    String cargo,
+public record FuncionarioUpdateRequestDTO(
+        @NotBlank(message = "Campo nome não deve ser vazio")
+        String nome,
 
-    @NotBlank(message = "A data de contratação não pode estar em branco.")
-    @Pattern(
-        regexp = "\\d{4}-\\d{2}-\\d{2}",
-        message = "A data de contratação deve estar no formato yyyy-MM-dd."
-    )
-    String dataContratacao,
+        @NotBlank(message = "Campo cpf não deve ser vazio")
+        String cpf,
 
-    @NotBlank(message = "O salário não pode estar em branco.")
-    String salario
-) {
+        @NotBlank(message = "Campo data de nascimento não deve ser vazio")
+        LocalDate dataNascimento,
 
-}
+        // CORRIGIDO: Campos do Funcionário adicionados
+        @NotBlank(message = "Campo cargo não deve ser vazio")
+        String cargo,
+
+        @NotNull @Positive
+        BigDecimal salario,
+
+        List<TelefoneRequestDTO> telefones,
+
+        List<EnderecoRequestDTO> enderecos
+) {}

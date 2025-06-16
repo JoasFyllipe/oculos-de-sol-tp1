@@ -4,16 +4,14 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import io.github.JoasFyllipe.dto.usuario.UsuarioRequestDTO;
-import io.github.JoasFyllipe.model.funcionario.Funcionario;
-import io.github.JoasFyllipe.model.usuario.Usuario;
+import io.github.JoasFyllipe.model.usuario.Funcionario;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
-import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
 public record FuncionarioRequestDTO(
     @NotNull(message = "Usuário é obrigatório")
-    long usuario,
+    UsuarioRequestDTO usuario,
 
     @NotNull(message = "Cargo é obrigatório")
     @Size(min = 2, max = 50, message = "O cargo deve ter entre 2 e 50 caracteres")
@@ -24,7 +22,7 @@ public record FuncionarioRequestDTO(
     LocalDate dataContratacao,
 
     @NotNull(message = "Salário é obrigatório")
-    String salario) {
+    BigDecimal salario) {
 
     public static Funcionario toEntity(FuncionarioRequestDTO dto) {
         if (dto == null) {
@@ -34,6 +32,7 @@ public record FuncionarioRequestDTO(
         funcionario.setCargo(dto.cargo());
         funcionario.setDataContratacao(dto.dataContratacao());
         funcionario.setSalario(dto.salario());
+        funcionario.setUsuario(UsuarioRequestDTO.toEntity(dto.usuario()));
         return funcionario;
     }
 }

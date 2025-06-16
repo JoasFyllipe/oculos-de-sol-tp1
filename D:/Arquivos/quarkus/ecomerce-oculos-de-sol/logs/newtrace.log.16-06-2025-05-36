@@ -1,0 +1,172 @@
+2025-06-16 05:36:00,388(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Admin atualizando funcionário com ID: 1
+2025-06-16 05:36:00,437(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Admin buscando funcionário por nome: Teste
+2025-06-16 05:36:03,824(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.MarcaResource] (Test runner thread)Usuário usuario@example.com buscando marca por ID: 1.
+2025-06-16 05:36:03,856(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.MarcaResource] (Test runner thread)Buscando todas as marcas.
+2025-06-16 05:36:03,884(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.MarcaResource] (Test runner thread)Usuário usuario@example.com buscando marca por nome: NaoExiste.
+2025-06-16 05:36:03,887(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.MarcaResource] (Test runner thread)Marca 'NaoExiste' não encontrada: Marca não encontrada
+2025-06-16 05:36:03,920(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.MarcaResource] (Test runner thread)Usuário usuario@example.com buscando marca por nome: MarcaTeste.
+2025-06-16 05:36:03,943(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.MarcaResource] (Test runner thread)Usuário usuario@example.com buscando marca por ID: 99.
+2025-06-16 05:36:03,946(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.MarcaResource] (Test runner thread)Marca ID 99 não encontrada: Marca não encontrada para o Id: 99
+2025-06-16 05:36:03,994(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.MarcaResource] (Test runner thread)Usuário administrador@example.com alterando marca ID 99 para nome MarcaAlterada.
+2025-06-16 05:36:03,998(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.MarcaResource] (Test runner thread)Marca ID 99 não encontrada para atualização: Marca não encontrada para atualização
+2025-06-16 05:36:04,023(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.MarcaResource] (Test runner thread)Usuário funcionario@example.com alterando marca ID 1 para nome MarcaAlterada.
+2025-06-16 05:36:04,062(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.MarcaResource] (Test runner thread)Usuário administrador@example.com deletando marca ID 99.
+2025-06-16 05:36:04,065(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.MarcaResource] (Test runner thread)Marca ID 99 não encontrada para exclusão: Marca não encontrada para exclusão
+2025-06-16 05:36:04,107(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.MarcaResource] (Test runner thread)Usuário administrador@example.com deletando marca ID 1.
+2025-06-16 05:36:04,132(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.MarcaResource] (Test runner thread)Usuário administrador@example.com incluindo nova marca: NovaMarca.
+2025-06-16 05:36:04,181(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.MarcaResource] (Test runner thread)Token JWT não possui o claim 'upn', 'preferred_username' ou 'email'.
+2025-06-16 05:36:04,795(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Atualizando cor do óculos com ID: 1
+2025-06-16 05:36:05,166(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Atualizando preço do óculos com ID: 1
+2025-06-16 05:36:05,413(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Atualizando estoque do óculos com ID: 1
+2025-06-16 05:36:05,628(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Atualizando nome do óculos com ID: 1
+2025-06-16 05:36:05,834(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Atualizando modelo do óculos com ID: 1
+2025-06-16 05:36:06,401(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Criando novo óculos: null
+2025-06-16 05:36:06,416(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Deletando óculos com ID: 1
+2025-06-16 05:36:06,456(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Atualizando óculos com ID: 1
+2025-06-16 05:36:06,500(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Buscando todos os óculos.
+2025-06-16 05:36:06,540(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Buscando óculos por ID: 1
+2025-06-16 05:36:06,557(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Realizando busca de óculos por filtro.
+2025-06-16 05:36:06,567(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.OculosResource] (Test runner thread)Realizando busca de óculos por filtro.
+2025-06-16 05:36:06,993(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com criando novo pedido.
+2025-06-16 05:36:06,995(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.PedidoResource] (Test runner thread)Erro de validação ao criar pedido para user@example.com: Dados inválidos.
+2025-06-16 05:36:07,044(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com criando novo pedido.
+2025-06-16 05:36:07,081(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com criando novo pedido.
+2025-06-16 05:36:07,084(dd-MM-yyyy HH:mm:ss) ERROR [io.gi.Jo.re.PedidoResource] (Test runner thread)Erro inesperado ao criar pedido para user@example.com.: java.lang.RuntimeException: Erro interno.
+	at io.github.JoasFyllipe.resource.PedidoResource.create(PedidoResource.java:58)
+	at io.github.JoasFyllipe.PedidoResourceTest$CreatePedidoTests.testCreatePedidoUnexpectedError(PedidoResourceTest.java:166)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:94)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:52)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:70)
+	at io.quarkus.deployment.dev.testing.JunitTestRunner$2.run(JunitTestRunner.java:227)
+	at io.quarkus.deployment.dev.testing.ModuleTestRunner$2.run(ModuleTestRunner.java:89)
+	at io.quarkus.deployment.dev.testing.TestSupport.runInternal(TestSupport.java:466)
+	at io.quarkus.deployment.dev.testing.TestSupport$3.run(TestSupport.java:386)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-06-16 05:36:07,122(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com criando novo pedido.
+2025-06-16 05:36:07,125(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.PedidoResource] (Test runner thread)Erro ao criar pedido para user@example.com: Cliente não encontrado.
+2025-06-16 05:36:07,188(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com solicitando cancelamento do pedido ID 1.
+2025-06-16 05:36:07,278(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com buscando sua compra de ID 99.
+2025-06-16 05:36:07,281(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.PedidoResource] (Test runner thread)Compra de ID 99 não encontrada para o usuário user@example.com.
+2025-06-16 05:36:07,325(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com buscando sua compra de ID 1.
+2025-06-16 05:36:07,367(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com gerando boleto para o pedido ID 1.
+2025-06-16 05:36:07,430(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com buscando seu histórico de compras.
+2025-06-16 05:36:07,492(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com gerando código PIX para o pedido ID 1.
+2025-06-16 05:36:07,525(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Usuário user@example.com solicitando cancelamento do pedido ID 1.
+2025-06-16 05:36:07,528(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.PedidoResource] (Test runner thread)Não foi possível cancelar o pedido ID 1 para user@example.com: Não pode cancelar.
+2025-06-16 05:36:07,556(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Operador adm@example.com atualizando situação do pedido ID 99 para a situação de ID 2.
+2025-06-16 05:36:07,559(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.PedidoResource] (Test runner thread)Pedido ID 99 não encontrado para atualização de situação.
+2025-06-16 05:36:07,594(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Operador adm@example.com buscando todos os pedidos.
+2025-06-16 05:36:07,616(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Serviço ou operador adm@example.com confirmando pagamento PIX para o pedido ID 1.
+2025-06-16 05:36:07,648(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Operador employe@example.com buscando pedido por ID 1.
+2025-06-16 05:36:07,670(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Serviço ou operador adm@example.com confirmando pagamento de boleto para o pedido ID 1.
+2025-06-16 05:36:07,703(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.PedidoResource] (Test runner thread)Operador adm@example.com atualizando situação do pedido ID 1 para a situação de ID 2.
+2025-06-16 05:36:07,728(dd-MM-yyyy HH:mm:ss) WARN  [io.gi.Jo.re.PedidoResource] (Test runner thread)Token JWT não possui o claim 'upn', 'preferred_username' ou 'email'.
+2025-06-16 05:36:08,044(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.TelefoneResource] (Test runner thread)Usuário user@example.com solicitou a exclusão do telefone com ID 1.
+2025-06-16 05:36:08,063(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.TelefoneResource] (Test runner thread)Usuário user@example.com solicitou a criação de um novo telefone.
+2025-06-16 05:36:08,064(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.TelefoneResource] (Test runner thread)Telefone com ID 2 criado com sucesso para o usuário: user@example.com
+2025-06-16 05:36:08,091(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.TelefoneResource] (Test runner thread)Usuário user@example.com solicitou a atualização do telefone com ID 1.
+2025-06-16 05:36:08,111(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.TelefoneResource] (Test runner thread)Buscando telefone com ID 1 para o usuário: user@example.com
+2025-06-16 05:36:08,129(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.TelefoneResource] (Test runner thread)Buscando todos os telefones para o usuário: user@example.com
+2025-06-16 05:36:08,475(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.UsuarioResource] (Test runner thread)Execução do método deletarUsuario para o id: 1
+2025-06-16 05:36:08,477(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.UsuarioResource] (Test runner thread)Usuário deletado com sucesso.
+2025-06-16 05:36:08,750(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.UsuarioResource] (Test runner thread)Execução do método findAll
+2025-06-16 05:36:08,752(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.UsuarioResource] (Test runner thread)Foram encontrados 1 usuários.
+2025-06-16 05:36:08,763(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.UsuarioResource] (Test runner thread)Execução do método findById para o id: 1
+2025-06-16 05:36:09,050(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CartaoResource] (Test runner thread)Buscando cartão com ID 1 para o usuário: user@example.com
+2025-06-16 05:36:09,066(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CartaoResource] (Test runner thread)Buscando todos os cartões para o usuário: user@example.com
+2025-06-16 05:36:09,305(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CartaoResource] (Test runner thread)Usuário user@example.com solicitou a criação de um novo cartão.
+2025-06-16 05:36:09,306(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CartaoResource] (Test runner thread)Cartão com ID 1 criado com sucesso para o usuário: user@example.com
+2025-06-16 05:36:09,325(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CartaoResource] (Test runner thread)Usuário user@example.com solicitou a exclusão do cartão com ID 1.
+2025-06-16 05:36:09,610(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para buscar cidades do estado de id: 1
+2025-06-16 05:36:09,626(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para listar todas as cidades.
+2025-06-16 05:36:09,662(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para buscar cidade por id: 1
+2025-06-16 05:36:09,682(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para criar nova cidade: Palmas
+2025-06-16 05:36:09,684(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Cidade criada com sucesso, id: 1
+2025-06-16 05:36:09,697(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para deletar cidade de id: 1
+2025-06-16 05:36:09,698(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Cidade deletada com sucesso.
+2025-06-16 05:36:09,708(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Requisição para atualizar cidade de id: 1
+2025-06-16 05:36:09,709(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (Test runner thread)Cidade atualizada com sucesso.
+2025-06-16 05:36:10,137(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m==================== TEST REPORT #1[39m ====================
+2025-06-16 05:36:10,142(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest JwtErrorTests#Deve lançar WebApplicationException se JWT não tiver claim de email failed 
+[39m: org.opentest4j.AssertionFailedError: expected: <Token inválido ou sem as informações de e-mail do usuário.> but was: <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at io.github.JoasFyllipe.MarcaResourceTest$JwtErrorTests.testGetUsuarioEmailThrowsException(MarcaResourceTest.java:254)
+
+2025-06-16 05:36:10,189(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m>>>>>>>>>>>>>>>>>>>> [91mSummary:[39m <<<<<<<<<<<<<<<<<<<<
+io.github.JoasFyllipe.MarcaResourceTest$JwtErrorTests#testGetUsuarioEmailThrowsException(MarcaResourceTest.java:254) [91mJwtErrorTests#Deve lançar WebApplicationException se JWT não tiver claim de email[39m expected: <Token inválido ou sem as informações de e-mail do usuário.> but was: <null>
+2025-06-16 05:36:10,244(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m>>>>>>>>>>>>>>>>>>>> [91m1 TEST FAILED[39m <<<<<<<<<<<<<<<<<<<<

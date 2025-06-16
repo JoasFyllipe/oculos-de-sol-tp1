@@ -1,0 +1,99 @@
+2025-06-14 16:32:44,349(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 29 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:44,353(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 37 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:44,355(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 44 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:44,358(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 53 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:44,360(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 62 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:44,362(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method setUsuario(io.github.JoasFyllipe.model.usuario.Usuario)
+  location: variable telefone of type io.github.JoasFyllipe.model.telefone.Telefone, line 35 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:44,364(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method findByUsuarioEmailAndId(java.lang.String,java.lang.Long)
+  location: variable telefoneRepository of type io.github.JoasFyllipe.repository.TelefoneRepository, line 50 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:44,366(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method findByUsuarioEmailAndId(java.lang.String,java.lang.Long)
+  location: variable telefoneRepository of type io.github.JoasFyllipe.repository.TelefoneRepository, line 60 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:44,369(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method findByUsuarioEmailAndId(java.lang.String,java.lang.Long)
+  location: variable telefoneRepository of type io.github.JoasFyllipe.repository.TelefoneRepository, line 72 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:47,037(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 29 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:47,048(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 37 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:47,055(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 44 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:47,060(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 53 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:47,063(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 62 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:47,072(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method setUsuario(io.github.JoasFyllipe.model.usuario.Usuario)
+  location: variable telefone of type io.github.JoasFyllipe.model.telefone.Telefone, line 35 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:47,077(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method findByUsuarioEmailAndId(java.lang.String,java.lang.Long)
+  location: variable telefoneRepository of type io.github.JoasFyllipe.repository.TelefoneRepository, line 50 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:47,084(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method findByUsuarioEmailAndId(java.lang.String,java.lang.Long)
+  location: variable telefoneRepository of type io.github.JoasFyllipe.repository.TelefoneRepository, line 60 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:47,088(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method findByUsuarioEmailAndId(java.lang.String,java.lang.Long)
+  location: variable telefoneRepository of type io.github.JoasFyllipe.repository.TelefoneRepository, line 72 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:50,113(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 29 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:50,119(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 37 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:50,124(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 44 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:50,127(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 53 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:50,130(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 62 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:50,133(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method setUsuario(io.github.JoasFyllipe.model.usuario.Usuario)
+  location: variable telefone of type io.github.JoasFyllipe.model.telefone.Telefone, line 35 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:50,138(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method findByUsuarioEmailAndId(java.lang.String,java.lang.Long)
+  location: variable telefoneRepository of type io.github.JoasFyllipe.repository.TelefoneRepository, line 50 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:50,141(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method findByUsuarioEmailAndId(java.lang.String,java.lang.Long)
+  location: variable telefoneRepository of type io.github.JoasFyllipe.repository.TelefoneRepository, line 60 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:50,144(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method findByUsuarioEmailAndId(java.lang.String,java.lang.Long)
+  location: variable telefoneRepository of type io.github.JoasFyllipe.repository.TelefoneRepository, line 72 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java
+2025-06-14 16:32:54,286(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 29 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:54,289(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 37 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:54,291(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 44 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:54,294(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 53 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:54,296(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method getUpn()
+  location: variable jwt of type org.eclipse.microprofile.jwt.JsonWebToken, line 62 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/TelefoneResource.java
+2025-06-14 16:32:54,298(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (vert.x-worker-thread-11)cannot find symbol
+  symbol:   method setUsuario(io.github.JoasFyllipe.model.usuario.Usuario)
+  location: variable telefone of type io.github.JoasFyllipe.model.telefone.Telefone, line 35 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/telefone/TelefoneServiceImpl.java

@@ -1,14 +1,16 @@
 package io.github.JoasFyllipe.resource;
 
-import io.github.JoasFyllipe.dto.oculos.OculosRequestDTO;
-import io.github.JoasFyllipe.dto.oculos.OculosResponseDTO;
+import io.github.JoasFyllipe.dto.oculos.*;
+import io.github.JoasFyllipe.dto.oculos.patch.*;
 import io.github.JoasFyllipe.service.oculos.OculosService;
+import jakarta.annotation.security.PermitAll;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
-import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-
+import org.jboss.logging.Logger;
 import java.util.List;
 
 @Path("/oculos")
@@ -17,88 +19,109 @@ import java.util.List;
 public class OculosResource {
 
     @Inject
-    OculosService oculosService;
+    OculosService service;
 
-    // Método para buscar todos os óculos
+    private static final Logger LOG = Logger.getLogger(OculosResource.class);
+
     @GET
-    public Response buscarTodos() {
-        List<OculosResponseDTO> oculosList = oculosService.findAll();
-        return Response.ok(oculosList).build();
+    @PermitAll
+    public List<OculosResponseDTO> findAll() {
+        LOG.info("Buscando todos os óculos.");
+        return service.findAll();
     }
 
-    // Método para buscar óculos por cor
-    @GET
-    @Path("cor/{id}")
-    public Response buscarPorCor(@QueryParam("id") String corOuId) {
-        List<OculosResponseDTO> oculosList = oculosService.findByCor(corOuId);
-        return Response.ok(oculosList).build();
-    }
-
-    // Método para buscar óculos por gênero
-    @GET
-    @Path("genero/{id}")
-    public Response buscarPorGenero(@QueryParam("id") String generoOuId) {
-        List<OculosResponseDTO> oculosList = oculosService.findByGenero(generoOuId);
-        return Response.ok(oculosList).build();
-    }
-
-    // Método para buscar óculos por modelo
-    @GET
-    @Path("modelo/{id}")
-    public Response buscarPorModelo(@QueryParam("id") String modeloOuId) {
-        List<OculosResponseDTO> oculosList = oculosService.findByModelo(modeloOuId);
-        return Response.ok(oculosList).build();
-    }
-
-    // Método para buscar óculos por ID
     @GET
     @Path("/{id}")
-    public Response buscarPorId(@PathParam("id") Long id) {
-        OculosResponseDTO oculosDTO = oculosService.findById(id);
-        if (oculosDTO != null) {
-            return Response.ok(oculosDTO).build();  // Retorna 200 (OK) se encontrado
-        } else {
-            return Response.status(Response.Status.NOT_FOUND).entity("Óculos não encontrado").build();  // Retorna 404 se não encontrado
-        }
+    @PermitAll
+    public OculosResponseDTO findById(@PathParam("id") Long id) {
+        LOG.infof("Buscando óculos por ID: %d", id);
+        return service.findById(id);
     }
 
-    // Método para buscar óculos por marca
     @GET
-    @Path("marca/{id}")
-    public Response buscarPorMarca(@QueryParam("id") String marcaOuId) {
-        List<OculosResponseDTO> oculosList = oculosService.findByMarca(marcaOuId);
-        return Response.ok(oculosList).build();
+    @Path("/search")
+    @PermitAll
+    public List<OculosResponseDTO> search(
+            @QueryParam("idCor") Integer idCor,
+            @QueryParam("idGenero") Integer idGenero,
+            @QueryParam("idModelo") Integer idModelo,
+            @QueryParam("idMarca") Long idMarca
+    ) {
+        LOG.info("Realizando busca de óculos por filtro.");
+        if (idCor != null) return service.findByCor(idCor);
+        if (idGenero != null) return service.findByGenero(idGenero);
+        if (idModelo != null) return service.findByModelo(idModelo);
+        if (idMarca != null) return service.findByMarca(idMarca);
+        return service.findAll(); // Retorna todos se nenhum filtro for aplicado
     }
 
-    // Método para adicionar um novo óculos
     @POST
-    public Response adicionarOculos(OculosRequestDTO oculosDTO) {
-        OculosResponseDTO oculosResponseDTO = oculosService.create(oculosDTO);
-        return Response.status(Response.Status.CREATED).entity(oculosResponseDTO).build();  // Retorna 201 (Created)
+    @RolesAllowed({"ADMIN", "EMPLOYE"})
+    public Response create(@Valid OculosRequestDTO dto) {
+        LOG.infof("Criando novo óculos: %s", dto.nome());
+        OculosResponseDTO responseDTO = service.create(dto);
+        return Response.status(Response.Status.CREATED).entity(responseDTO).build();
     }
 
-    // Método para atualizar um óculos existente
     @PUT
-    @Path("{id}")
-    @Transactional
-    public Response atualizarOculos(@PathParam("id") Long id, OculosRequestDTO oculosDTO) {
-        try {
-            oculosService.update(id, oculosDTO);
-            return Response.noContent().build();  // Retorna 204 (No Content) se atualizado com sucesso
-        } catch (Exception e) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Óculos não encontrado para atualização").build();  // Retorna 404 se não encontrado
-        }
+    @Path("/{id}")
+    @RolesAllowed({"ADMIN", "EMPLOYE"})
+    public OculosResponseDTO update(@PathParam("id") Long id, @Valid OculosRequestDTO dto) {
+        LOG.infof("Atualizando óculos com ID: %d", id);
+        return service.update(id, dto);
     }
 
-    // Método para deletar um óculos
     @DELETE
-    @Path("{id}")
-    public Response deletarOculos(@PathParam("id") Long id) {
-        try {
-            oculosService.delete(id);
-            return Response.noContent().build();  // Retorna 204 (No Content) se deletado com sucesso
-        } catch (Exception e) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Óculos não encontrado para exclusão").build();  // Retorna 404 se não encontrado
-        }
+    @Path("/{id}")
+    @RolesAllowed({"ADMIN", "EMPLOYE"})
+    public Response delete(@PathParam("id") Long id) {
+        LOG.infof("Deletando óculos com ID: %d", id);
+        service.delete(id);
+        return Response.noContent().build();
+    }
+
+    @PATCH
+    @Path("/{id}/estoque")
+    @RolesAllowed({"ADMIN", "EMPLOYE"})
+    public Response updateEstoque(@PathParam("id") Long id, @Valid OculosUpdateEstoqueDTO dto) {
+        LOG.infof("Atualizando estoque do óculos com ID: %d", id);
+        service.updateEstoque(id, dto);
+        return Response.noContent().build();
+    }
+
+    @PATCH
+    @Path("/{id}/nome")
+    @RolesAllowed({"ADMIN", "EMPLOYE"})
+    public Response updateNome(@PathParam("id") Long id, @Valid OculosUpdateNomeDTO dto) {
+        LOG.infof("Atualizando nome do óculos com ID: %d", id);
+        service.updateNome(id, dto);
+        return Response.noContent().build();
+    }
+
+    @PATCH
+    @Path("/{id}/preco")
+    @RolesAllowed({"ADMIN", "EMPLOYE"})
+    public Response updatePreco(@PathParam("id") Long id, @Valid OculosUpdatePrecoDTO dto) {
+        LOG.infof("Atualizando preço do óculos com ID: %d", id);
+        service.updatePreco(id, dto);
+        return Response.noContent().build();
+    }
+
+    @PATCH
+    @Path("/{id}/cor")
+    @RolesAllowed({"ADMIN", "EMPLOYE"})
+    public Response updateCor(@PathParam("id") Long id, @Valid OculosUpdateCorDTO dto) {
+        LOG.infof("Atualizando cor do óculos com ID: %d", id);
+        service.updateCor(id, dto);
+        return Response.noContent().build();
+    }
+
+    @PATCH
+    @Path("/{id}/modelo")
+    @RolesAllowed({"ADMIN", "EMPLOYE"})
+    public Response updateModelo(@PathParam("id") Long id, @Valid OculosUpdateModeloDTO dto) {
+        LOG.infof("Atualizando modelo do óculos com ID: %d", id);
+        service.updateModelo(id, dto);
+        return Response.noContent().build();
     }
 }

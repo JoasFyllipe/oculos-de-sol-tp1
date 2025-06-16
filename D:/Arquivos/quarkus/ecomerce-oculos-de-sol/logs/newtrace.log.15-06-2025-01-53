@@ -1,0 +1,3 @@
+2025-06-15 01:53:01,627(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (executor-thread-3)Requisição para buscar estado por nome contendo: tocantins
+2025-06-15 01:53:11,061(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (executor-thread-3)Requisição para buscar estado por sigla: to
+2025-06-15 01:53:30,788(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (executor-thread-3)Requisição para buscar estado por id: 1

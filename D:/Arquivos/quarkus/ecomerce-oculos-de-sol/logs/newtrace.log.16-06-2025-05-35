@@ -1,0 +1,44 @@
+2025-06-16 05:35:53,271(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria lista de telefones.
+2025-06-16 05:35:53,660(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o próprio e-mail.
+2025-06-16 05:35:53,930(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com buscando suas próprias informações de cliente.
+2025-06-16 05:35:53,990(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria lista de endereços.
+2025-06-16 05:35:54,234(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o próprio CPF.
+2025-06-16 05:35:54,564(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria data de nascimento.
+2025-06-16 05:35:54,829(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria senha.
+2025-06-16 05:35:55,143(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o telefone específico de ID 1.
+2025-06-16 05:35:55,373(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o próprio nome.
+2025-06-16 05:35:55,449(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin executando findAll de clientes.
+2025-06-16 05:35:55,495(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin buscando cliente por nome: Test
+2025-06-16 05:35:55,523(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin buscando cliente por ID: 1
+2025-06-16 05:35:55,555(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin gerando cliente a partir do funcionário com e-mail: funcionario@email.com
+2025-06-16 05:35:55,585(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin deletando cliente com ID: 1
+2025-06-16 05:35:55,811(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Recebida nova solicitação de cadastro de cliente.
+2025-06-16 05:35:56,453(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EnderecoResource] (Test runner thread)Usuário user@example.com solicitou a atualização do endereço com ID 1.
+2025-06-16 05:35:56,780(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EnderecoResource] (Test runner thread)Buscando todos os endereços para o usuário: user@example.com
+2025-06-16 05:35:56,820(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EnderecoResource] (Test runner thread)Buscando endereço com ID 1 para o usuário: user@example.com
+2025-06-16 05:35:56,845(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EnderecoResource] (Test runner thread)Usuário user@example.com solicitou a exclusão do endereço com ID 1.
+2025-06-16 05:35:56,869(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EnderecoResource] (Test runner thread)Usuário user@example.com solicitou a criação de um novo endereço.
+2025-06-16 05:35:56,871(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EnderecoResource] (Test runner thread)Endereço com ID 1 criado com sucesso para o usuário: user@example.com
+2025-06-16 05:35:57,688(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (Test runner thread)Requisição para listar todos os estados.
+2025-06-16 05:35:57,747(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (Test runner thread)Requisição para buscar estado por sigla: TO
+2025-06-16 05:35:57,787(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (Test runner thread)Requisição para criar novo estado: Tocantins
+2025-06-16 05:35:57,797(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (Test runner thread)Estado criado com sucesso, id: 0
+2025-06-16 05:35:57,808(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (Test runner thread)Requisição para deletar estado de id: 1
+2025-06-16 05:35:57,810(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (Test runner thread)Estado deletado com sucesso.
+2025-06-16 05:35:57,823(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (Test runner thread)Requisição para atualizar estado de id: 1
+2025-06-16 05:35:57,832(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.EstadoResource] (Test runner thread)Estado atualizado com sucesso.
+2025-06-16 05:35:58,536(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Admin employee@example.com atualizando o próprio salário.
+2025-06-16 05:35:58,565(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Usuário employee@example.com atualizando o próprio CPF.
+2025-06-16 05:35:58,602(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Usuário employee@example.com atualizando o próprio e-mail.
+2025-06-16 05:35:58,619(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Usuário employee@example.com atualizando a própria senha.
+2025-06-16 05:35:58,642(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Usuário employee@example.com atualizando a própria lista de endereços.
+2025-06-16 05:35:58,663(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Usuário employee@example.com atualizando o próprio nome.
+2025-06-16 05:35:58,693(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Usuário employee@example.com atualizando o telefone específico de ID 1.
+2025-06-16 05:35:58,719(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Usuário employee@example.com atualizando a própria data de nascimento.
+2025-06-16 05:35:58,745(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Usuário employee@example.com atualizando a própria lista de telefones.
+2025-06-16 05:35:59,680(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Admin criando novo funcionário.
+2025-06-16 05:35:59,748(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Admin deletando funcionário com ID: 1
+2025-06-16 05:35:59,789(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Admin buscando funcionários por cargo: Vendedor
+2025-06-16 05:35:59,817(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Admin buscando funcionário por e-mail: teste@email.com
+2025-06-16 05:35:59,883(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Admin buscando funcionário por ID: 1
+2025-06-16 05:35:59,932(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.FuncionarioResource] (Test runner thread)Admin acessando lista de todos os funcionários.

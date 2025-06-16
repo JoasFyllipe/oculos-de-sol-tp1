@@ -1,0 +1,1 @@
+2025-06-16 02:02:51,297(dd-MM-yyyy HH:mm:ss) WARN  [or.hi.di.Dialect] (Quarkus Main Thread)HHH000511: The 10.18.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.

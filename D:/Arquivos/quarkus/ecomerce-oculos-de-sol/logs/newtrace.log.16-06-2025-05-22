@@ -1,0 +1,30 @@
+2025-06-16 05:22:03,436(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaRequestDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 85 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:22:03,441(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaRequestDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 90 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:22:03,450(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 99 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:22:03,451(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 24 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/marca/MarcaServIceimpl.java
+2025-06-16 05:22:03,485(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 36 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/marca/MarcaServIceimpl.java
+2025-06-16 05:22:04,757(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaRequestDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 85 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:22:04,759(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaRequestDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 90 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:22:04,760(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type @jakarta.validation.Valid io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 99 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/resource/MarcaResource.java
+2025-06-16 05:22:04,761(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 24 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/marca/MarcaServIceimpl.java
+2025-06-16 05:22:04,762(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.de.de.JavaCompilationProvider] (Quarkus Test Watcher - 0)cannot find symbol
+  symbol:   method getNome()
+  location: variable marcaDTO of type io.github.JoasFyllipe.dto.marca.MarcaRequestDTO, line 36 in /home/joas/Downloads/oculos-de-sol-tp1 - ATUALIZADO/oculos-de-sol-tp1/src/main/java/io/github/JoasFyllipe/service/marca/MarcaServIceimpl.java

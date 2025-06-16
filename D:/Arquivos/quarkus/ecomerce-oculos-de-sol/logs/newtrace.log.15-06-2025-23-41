@@ -1,0 +1,8 @@
+2025-06-15 23:41:38,658(dd-MM-yyyy HH:mm:ss) WARN  [or.hi.di.Dialect] (Quarkus Main Thread)HHH000511: The 10.18.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-06-15 23:41:41,258(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.ut.AdminUserCreator] (Quarkus Main Thread)Verificando a existência do usuário ADMIN na inicialização...
+2025-06-15 23:41:41,296(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.ut.AdminUserCreator] (Quarkus Main Thread)Usuário ADMIN não encontrado. Criando um novo...
+2025-06-15 23:41:41,360(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.ut.AdminUserCreator] (Quarkus Main Thread)Usuário ADMIN 'admin@email.com' criado com sucesso.
+2025-06-15 23:41:41,430(dd-MM-yyyy HH:mm:ss) INFO  [io.quarkus] (Quarkus Main Thread)oculos-de-sol-tp1 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.19.2) started in 9.695s. Listening on: http://localhost:8080
+2025-06-15 23:41:41,434(dd-MM-yyyy HH:mm:ss) INFO  [io.quarkus] (Quarkus Main Thread)Profile dev activated. Live Coding activated.
+2025-06-15 23:41:41,442(dd-MM-yyyy HH:mm:ss) INFO  [io.quarkus] (Quarkus Main Thread)Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-postgresql, narayana-jta, resteasy, resteasy-jackson, security, smallrye-context-propagation, smallrye-jwt, smallrye-openapi, swagger-ui, vertx]
+2025-06-15 23:41:41,450(dd-MM-yyyy HH:mm:ss) INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-8)Live reload total time: 12.479s 

@@ -1,0 +1,169 @@
+@startuml ProjetoTP1
+
+class Oculos {
+    - nome: String
+    - valor: double
+}
+
+enum CorArmacao {
+    + PRETO: int
+    + DOURADO: int
+    + PRATA: int
+}
+
+enum Genero {
+    + MASCULINO: int
+    + FEMININO: int
+    + UNISEX: int
+}
+
+enum Modelo {
+    + AVIADOR: int
+    + ESPORTIVO: int
+    + RETRO: int
+}
+
+
+class Funcionario {
+    - dataContrato: Double
+}
+
+class Cliente {
+    - dataCadastro: LocalDate
+}
+
+class ItemPedido {
+    - quantidade: Integer
+    - preco: Double
+}
+
+class Pedido {
+    - data: LocalDateTime
+    - valorTotal: Double
+}
+
+abstract class Pagamento {
+    - valor: Double
+}
+
+class Pix {
+    - chave: String
+    - validade: LocalDate
+}
+
+class Boleto {
+    - codigoBarras: String
+    - numero: String
+    - validade: LocalDate
+}
+
+class CartaoPagamento {
+    - titular: String
+    - cpfCpf: String
+    - numero: String
+    - validade: LocalDate
+    - cvc: String
+}
+
+class EnderecoEntrega {
+    - logradouro: String
+    - numero: String
+    - bairro: String
+    - complemento: String
+    - cep: String
+}
+
+class Endereco {
+    - logradouro: String
+    - numero: String
+    - bairro: String
+    - complemento: String
+    - cep: String
+}
+
+class Cidade {
+    - nome: String
+}
+
+class Estado {
+    - nome: String
+    - sigla: String
+}
+
+class Usuario {
+    - nome: String
+    - cpf: String
+    - dataNascimento: LocalDate
+    - email: String
+    - senha: String
+}
+
+class Telefone {
+    - numero: String
+    - tipo: String
+    - principal: boolean
+}
+
+class Cartao {
+    - titular: String
+    - cpfCnpj: String
+    - numero: String
+    - validade: LocalDate
+    - cvc: String
+}
+
+enum SituacaoPedido {
+    + AGUARDANDO_PAGAMENTO: int
+    + PAGAMENTO_AUTORIZADO: int
+    + PAGAMENTO_EXPIRADO: int
+    + CANCELADO: int
+    + ENVIADO: int
+    + ENTREGUE: int
+    + DEVOLVIDO: int
+}
+
+enum ModalidadeCartao {
+    + CREDITO
+    + DEBITO
+}
+
+enum Perfil {
+    + ADM
+    + USER
+}
+
+
+Oculos "*" o--> "1" Genero
+Oculos "*" o--> "1" CorArmacao
+Oculos "*" o--> "1" Modelo
+
+Pedido "1" *--> "1" Cliente
+Pedido "*" --> "*" EnderecoEntrega
+Pedido "*" *--> "1" ItemPedido
+Pedido "1" *--> "1" Pagamento
+Pedido "1" *--> "1" SituacaoPedido
+
+Pagamento <|-- Pix
+Pagamento <|-- Boleto
+Pagamento <|-- CartaoPagamento
+
+Cliente "1" --> "1" EnderecoEntrega
+Cliente "1" --> "1" Usuario
+Cliente "1" --> "*" Cartao
+
+Funcionario "1" --> "1" Usuario
+
+Usuario "1" *--> "*" Telefone
+Usuario "1" *--> "*" Endereco
+Usuario "*" --> "1" Perfil
+
+EnderecoEntrega "*" --> "1" Cidade
+Endereco "*" --> "1" Cidade
+Cidade "*" --> "1" Estado
+
+ItemPedido "1" --> "*" Oculos
+
+Cartao "1" --> "1" ModalidadeCartao
+
+CartaoPagamento "1" --> "1" ModalidadeCartao
+@enduml

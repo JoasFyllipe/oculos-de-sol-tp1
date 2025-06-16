@@ -1,0 +1,3 @@
+2025-06-14 17:35:07,665(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (executor-thread-2)Execucao do metodo findAll
+2025-06-14 17:35:21,169(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.UsuarioResource] (executor-thread-2)Execução do método findAll
+2025-06-14 17:35:21,287(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.UsuarioResource] (executor-thread-2)Foram encontrados 3 usuários.

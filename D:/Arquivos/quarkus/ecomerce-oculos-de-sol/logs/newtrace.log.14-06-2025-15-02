@@ -1,0 +1,7 @@
+2025-06-14 15:02:23,340(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.ut.AdminUserCreator] (Quarkus Main Thread)Verificando a existência do usuário ADMIN na inicialização...
+2025-06-14 15:02:23,395(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.ut.AdminUserCreator] (Quarkus Main Thread)Usuário ADMIN não encontrado. Criando um novo...
+2025-06-14 15:02:23,615(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.ut.AdminUserCreator] (Quarkus Main Thread)Usuário ADMIN 'admin@email.com' criado com sucesso.
+2025-06-14 15:02:23,645(dd-MM-yyyy HH:mm:ss) INFO  [io.quarkus] (Quarkus Main Thread)oculos-de-sol-tp1 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.19.2) started in 10.063s. Listening on: http://localhost:8080
+2025-06-14 15:02:23,657(dd-MM-yyyy HH:mm:ss) INFO  [io.quarkus] (Quarkus Main Thread)Profile dev activated. Live Coding activated.
+2025-06-14 15:02:23,659(dd-MM-yyyy HH:mm:ss) INFO  [io.quarkus] (Quarkus Main Thread)Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-postgresql, narayana-jta, resteasy, resteasy-jackson, security, smallrye-context-propagation, smallrye-jwt, smallrye-openapi, swagger-ui, vertx]
+2025-06-14 15:02:23,675(dd-MM-yyyy HH:mm:ss) INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-5)Live reload total time: 12.030s 

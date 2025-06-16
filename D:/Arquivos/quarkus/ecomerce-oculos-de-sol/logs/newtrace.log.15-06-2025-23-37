@@ -1,0 +1,95 @@
+2025-06-15 23:37:25,090(dd-MM-yyyy HH:mm:ss) WARN  [or.hi.di.Dialect] (Quarkus Main Thread)HHH000511: The 10.18.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-06-15 23:37:27,674(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.ut.AdminUserCreator] (Quarkus Main Thread)Verificando a existência do usuário ADMIN na inicialização...
+2025-06-15 23:37:27,700(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.ut.AdminUserCreator] (Quarkus Main Thread)Usuário ADMIN não encontrado. Criando um novo...
+2025-06-15 23:37:27,742(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.ut.AdminUserCreator] (Quarkus Main Thread)Usuário ADMIN 'admin@email.com' criado com sucesso.
+2025-06-15 23:37:27,785(dd-MM-yyyy HH:mm:ss) INFO  [io.quarkus] (Quarkus Main Thread)oculos-de-sol-tp1 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.19.2) started in 16.163s. Listening on: http://localhost:8080
+2025-06-15 23:37:27,790(dd-MM-yyyy HH:mm:ss) INFO  [io.quarkus] (Quarkus Main Thread)Profile dev activated. Live Coding activated.
+2025-06-15 23:37:27,792(dd-MM-yyyy HH:mm:ss) INFO  [io.quarkus] (Quarkus Main Thread)Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-postgresql, narayana-jta, resteasy, resteasy-jackson, security, smallrye-context-propagation, smallrye-jwt, smallrye-openapi, swagger-ui, vertx]
+2025-06-15 23:37:27,797(dd-MM-yyyy HH:mm:ss) INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-1)Live reload total time: 24.518s 
+2025-06-15 23:37:27,800(dd-MM-yyyy HH:mm:ss) INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-1)Live reload took more than 4 seconds, you may want to enable instrumentation based reload (quarkus.live-reload.instrumentation=true). This allows small changes to take effect without restarting Quarkus.
+2025-06-15 23:37:57,723(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.UsuarioResource] (executor-thread-3)Execução do método findAll
+2025-06-15 23:37:57,783(dd-MM-yyyy HH:mm:ss) WARN  [or.hi.en.jd.sp.SqlExceptionHelper] (executor-thread-3)SQL Error: 0, SQLState: null
+2025-06-15 23:37:57,787(dd-MM-yyyy HH:mm:ss) ERROR [or.hi.en.jd.sp.SqlExceptionHelper] (executor-thread-3)ResultSet is closed
+2025-06-15 23:37:57,798(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.ve.ht.ru.QuarkusErrorHandler] (executor-thread-3)HTTP Request to /usuarios failed, error id: 6dda1747-9454-4345-a232-861e592e5c31-3: org.jboss.resteasy.spi.UnhandledException: org.hibernate.sql.exec.ExecutionException: A problem occurred in the SQL executor : Error advancing (next) ResultSet position [ResultSet is closed]
+	at org.jboss.resteasy.core.ExceptionHandler.handleApplicationException(ExceptionHandler.java:107)
+	at org.jboss.resteasy.core.ExceptionHandler.handleException(ExceptionHandler.java:344)
+	at org.jboss.resteasy.core.SynchronousDispatcher.writeException(SynchronousDispatcher.java:205)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:452)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invokePropagateNotFound$6(SynchronousDispatcher.java:275)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:154)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:321)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:157)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invokePropagateNotFound(SynchronousDispatcher.java:260)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:86)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:151)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:97)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$15.runWith(VertxCoreRecorder.java:638)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.doRunWith(EnhancedQueueExecutor.java:2675)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2654)
+	at org.jboss.threads.EnhancedQueueExecutor.runThreadBody(EnhancedQueueExecutor.java:1627)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1594)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:11)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:11)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.sql.exec.ExecutionException: A problem occurred in the SQL executor : Error advancing (next) ResultSet position [ResultSet is closed]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.makeExecutionException(JdbcValuesResultSetImpl.java:325)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:273)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:150)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:99)
+	at org.hibernate.internal.ScrollableResultsImpl.next(ScrollableResultsImpl.java:51)
+	at org.hibernate.query.internal.ScrollableResultsIterator.hasNext(ScrollableResultsIterator.java:33)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at io.github.JoasFyllipe.service.usuario.UsuarioServiceImpl.findAll(UsuarioServiceImpl.java:60)
+	at io.github.JoasFyllipe.service.usuario.UsuarioServiceImpl_ClientProxy.findAll(Unknown Source)
+	at io.github.JoasFyllipe.resource.UsuarioResource.findAll(UsuarioResource.java:32)
+	at io.github.JoasFyllipe.resource.UsuarioResource_Subclass.findAll$$superforward(Unknown Source)
+	at io.github.JoasFyllipe.resource.UsuarioResource_Subclass$$function$$5.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext$NextAroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:97)
+	at io.quarkus.security.runtime.interceptor.SecurityHandler.handle(SecurityHandler.java:27)
+	at io.quarkus.security.runtime.interceptor.RolesAllowedInterceptor.intercept(RolesAllowedInterceptor.java:29)
+	at io.quarkus.security.runtime.interceptor.RolesAllowedInterceptor_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:70)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.resteasy.runtime.StandardSecurityCheckInterceptor.intercept(StandardSecurityCheckInterceptor.java:53)
+	at io.quarkus.resteasy.runtime.StandardSecurityCheckInterceptor_RolesAllowedInterceptor_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at io.github.JoasFyllipe.resource.UsuarioResource_Subclass.findAll(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:154)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:118)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:560)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:452)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:413)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:321)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:415)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:378)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:356)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:70)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:429)
+	... 17 more
+Caused by: org.hibernate.exception.GenericJDBCException: Error advancing (next) ResultSet position [ResultSet is closed] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.makeExecutionException(JdbcValuesResultSetImpl.java:314)
+	... 62 more
+Caused by: java.sql.SQLException: ResultSet is closed
+	at io.agroal.pool.wrapper.ResultSetWrapper$1.invoke(ResultSetWrapper.java:54)
+	at jdk.proxy5/jdk.proxy5.$Proxy163.next(Unknown Source)
+	at io.agroal.pool.wrapper.ResultSetWrapper.next(ResultSetWrapper.java:90)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:270)
+	... 61 more
+

@@ -1,0 +1,3 @@
+2025-06-15 01:55:28,247(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CartaoResource] (executor-thread-3)Usuário maria@gmail.com solicitou a criação de um novo cartão.
+2025-06-15 01:55:28,437(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CartaoResource] (executor-thread-3)Cartão com ID 1 criado com sucesso para o usuário: maria@gmail.com
+2025-06-15 01:55:57,692(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CartaoResource] (executor-thread-3)Buscando todos os cartões para o usuário: maria@gmail.com

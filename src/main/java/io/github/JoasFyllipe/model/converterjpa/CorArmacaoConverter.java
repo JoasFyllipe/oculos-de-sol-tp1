@@ -9,7 +9,7 @@ public class CorArmacaoConverter implements AttributeConverter<CorArmacao, Integ
 
     @Override
     public Integer convertToDatabaseColumn(CorArmacao corArmacao) {
-        return corArmacao == null ? null : corArmacao.getID();
+        return corArmacao == null ? null : corArmacao.getId();
     }
 
     @Override

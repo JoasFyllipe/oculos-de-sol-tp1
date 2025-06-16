@@ -9,25 +9,25 @@ public enum Genero {
     FEMININO(2, "Feminino"),
     UNISEX(3, "Unisex");
 
-    private final int ID;
-    private final String NOME;
+    private final int id;
+    private final String label;
 
-    Genero(int ID, String NOME) {
-        this.ID = ID;
-        this.NOME = NOME;
+    Genero(int id, String label) {
+        this.id = id;
+        this.label = label;
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public String getNOME() {
-        return NOME;
+    public String getLabel() {
+        return label;
     }
 
     public static Genero valueOf(int id){
         for(Genero g: Genero.values()){
-            if(g.getID() == id)
+            if(g.getId() == id)
                 return g;
         }
         return null;
@@ -35,7 +35,7 @@ public enum Genero {
 
     public static Genero fromNome(String nome){
         for(Genero g: Genero.values()){
-            if(g.getNOME().equalsIgnoreCase(nome))
+            if(g.getLabel().equalsIgnoreCase(nome))
                 return g;
         }
         throw new GenderNotFoundException("Gênero não encontrada: " + nome);
@@ -43,7 +43,7 @@ public enum Genero {
 
     public static Genero fromId(int id){
         for(Genero g: Genero.values()){
-            if(g.getID() == id)
+            if(g.getId() == id)
                 return g;
         }
         throw new GenderNotFoundException("Gênero não encontrada para o ID: "+ id);

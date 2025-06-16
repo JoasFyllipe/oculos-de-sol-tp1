@@ -1,0 +1,51 @@
+2025-06-16 02:13:00,055(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria lista de telefones.
+2025-06-16 02:13:00,368(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o próprio e-mail.
+2025-06-16 02:13:00,665(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com buscando suas próprias informações de cliente.
+2025-06-16 02:13:00,697(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria lista de endereços.
+2025-06-16 02:13:01,018(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o próprio CPF.
+2025-06-16 02:13:01,307(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria data de nascimento.
+2025-06-16 02:13:01,672(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando a própria senha.
+2025-06-16 02:13:01,984(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o telefone específico de ID 1.
+2025-06-16 02:13:02,304(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Usuário cliente@example.com atualizando o próprio nome.
+2025-06-16 02:13:02,336(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin executando findAll de clientes.
+2025-06-16 02:13:02,360(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin buscando cliente por nome: Test
+2025-06-16 02:13:02,388(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin buscando cliente por ID: 1
+2025-06-16 02:13:02,423(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin gerando cliente a partir do funcionário com e-mail: funcionario@email.com
+2025-06-16 02:13:02,457(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Admin deletando cliente com ID: 1
+2025-06-16 02:13:02,886(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (Test runner thread)Recebida nova solicitação de cadastro de cliente.
+2025-06-16 02:13:03,611(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m==================== TEST REPORT #5[39m ====================
+2025-06-16 02:13:03,613(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve lançar WebApplicationException para senha inválida failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:13:03,615(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve retornar um token quando o login for bem-sucedido failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:13:03,617(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[91mTest AuthResourceTest#Deve lançar WebApplicationException para usuário inválido failed 
+[39m: org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+	at io.github.JoasFyllipe.resource.AuthResourceTest.setup(AuthResourceTest.java:37)
+
+2025-06-16 02:13:03,623(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m>>>>>>>>>>>>>>>>>>>> [91mSummary:[39m <<<<<<<<<<<<<<<<<<<<
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve lançar WebApplicationException para senha inválida[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve retornar um token quando o login for bem-sucedido[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+io.github.JoasFyllipe.resource.AuthResourceTest#setup(AuthResourceTest.java:37) [91mAuthResourceTest#Deve lançar WebApplicationException para usuário inválido[39m 
+Cannot mock/spy class java.lang.String
+Mockito cannot mock/spy because :
+ - Cannot mock wrapper types, String.class or Class.class
+2025-06-16 02:13:03,625(dd-MM-yyyy HH:mm:ss) ERROR [io.qu.test] (Test runner thread)[39m>>>>>>>>>>>>>>>>>>>> [91m3 TESTS FAILED[39m <<<<<<<<<<<<<<<<<<<<

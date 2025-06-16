@@ -6,47 +6,48 @@ import io.github.JoasFyllipe.exceptions.ColorNotFoundException;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum CorArmacao {
     PRETO(1, "Preto"),
-    DOURADO(2, "Dourado"),
-    PRATA(3, "Prata");
+    MARROM(2, "Marrom"),
+    AZUL(3, "Azul"),
+    VERMELHO(4, "Vermelho"),
+    DOURADO(5, "Dourado");
 
-    private final Integer ID;
-    private final String NOME;
+    private final Integer id;
+    private final String label;
 
-    CorArmacao(int ID, String NOME) {
-        this.ID = ID;
-        this.NOME = NOME;
+    CorArmacao(Integer id, String label) {
+        this.id = id;
+        this.label = label;
     }
 
-    public Integer getID() {
-        return ID;
+    public Integer getId() {
+        return id;
     }
 
-    public String getNOME() {
-        return NOME;
+    public String getLabel() {
+        return label;
     }
 
+    public static CorArmacao valueOf(Integer id) {
+        if (id == null) {
+            throw new IllegalArgumentException("O ID da cor não pode ser nulo.");
+        }
+        for (CorArmacao cor : CorArmacao.values()) {
+            if (cor.getId().equals(id)) {
+                return cor;
+            }
+        }
+
+        throw new IllegalArgumentException("ID de Cor da Armação inválido: " + id);
+    }
 
     public static CorArmacao fromNome(String nome){
+        if (nome == null || nome.isBlank()) {
+            throw new IllegalArgumentException("O nome da cor não pode ser nulo ou vazio.");
+        }
         for(CorArmacao c: CorArmacao.values()){
-            if(c.getNOME().equalsIgnoreCase(nome))
+            if(c.getLabel().equalsIgnoreCase(nome))
                 return c;
         }
         throw new ColorNotFoundException("Cor não encontrada: " + nome);
-    }
-
-    public static CorArmacao fromId(int id){
-        for(CorArmacao c: CorArmacao.values()){
-            if(c.getID() == id)
-                return c;
-        }
-        throw new ColorNotFoundException("Cor não encontrada para o ID: "+ id);
-    }
-
-    public static CorArmacao valueOf(int id) {
-        for (CorArmacao c : CorArmacao.values()) {
-            if (c.getID() == id)
-                return c;
-        }
-        return null;
     }
 }

@@ -2,12 +2,17 @@ package io.github.JoasFyllipe.resource;
 
 import io.github.JoasFyllipe.dto.marca.MarcaRequestDTO;
 import io.github.JoasFyllipe.dto.marca.MarcaResponseDTO;
+import io.github.JoasFyllipe.exceptions.MarcaNotFoundException;
 import io.github.JoasFyllipe.service.marca.MarcaService;
+import jakarta.annotation.security.PermitAll;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
-import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import org.eclipse.microprofile.jwt.JsonWebToken;
+import org.jboss.logging.Logger;
 import java.util.List;
 
 @Path("/marca")
@@ -18,66 +23,109 @@ public class MarcaResource {
     @Inject
     MarcaService marcaService;
 
-    // Método para buscar todas as marcas
+    @Inject
+    JsonWebToken jwt;
+
+    private static final Logger LOG = Logger.getLogger(MarcaResource.class);
+
+    public String getUsuarioEmail() {
+        String email = jwt.getClaim("upn");
+        if (email == null) {
+            email = jwt.getClaim("preferred_username");
+            if (email == null) {
+                email = jwt.getClaim("email");
+            }
+        }
+        if (email == null) {
+            LOG.warn("Token JWT não possui o claim 'upn', 'preferred_username' ou 'email'.");
+            // CORREÇÃO AQUI: Construindo a WebApplicationException passando um Response completo
+            throw new WebApplicationException(
+                    Response.status(Response.Status.FORBIDDEN)
+                            .entity("Token inválido ou sem as informações de e-mail do usuário.")
+                            .build()
+            );
+        }
+        return email;
+    }
+
     @GET
+    @PermitAll
     public List<MarcaResponseDTO> buscarTodos() {
+        LOG.infof("Buscando todas as marcas.");
         return marcaService.findAll();
     }
 
-    // Método para buscar uma marca por nome
     @GET
     @Path("/nome/{nome}")
+    @RolesAllowed({"USER", "ADM", "EMPLOYE"})
     public MarcaResponseDTO buscarPorNome(@PathParam("nome") String nome) {
-        MarcaResponseDTO marca = marcaService.findByNome(nome);
-        if (marca != null) {
-            return marca;
-        } else {
-            throw new NotFoundException("Marca não encontrada");
+        LOG.infof("Usuário %s buscando marca por nome: %s.", getUsuarioEmail(), nome);
+        try {
+            return marcaService.findByNome(nome);
+        } catch (MarcaNotFoundException e) {
+            LOG.warnf("Marca '%s' não encontrada: %s", nome, e.getMessage());
+            throw new NotFoundException(e.getMessage());
         }
     }
 
-    // Método para buscar uma marca por ID
     @GET
     @Path("/{id}")
+    @RolesAllowed({"USER", "ADM", "EMPLOYE"})
     public Response buscarPorId(@PathParam("id") Long id) {
-        MarcaResponseDTO marca = marcaService.findById(id);
-        if (marca != null) {
-            return Response.ok(marca).build();  // Retorna status 200 (OK) com o objeto
-        } else {
-            return Response.status(Response.Status.NOT_FOUND).entity("Marca não encontrada").build();  // Retorna status 404 se não encontrar
+        LOG.infof("Usuário %s buscando marca por ID: %d.", getUsuarioEmail(), id);
+        try {
+            MarcaResponseDTO marca = marcaService.findById(id);
+            return Response.ok(marca).build();
+        } catch (MarcaNotFoundException e) {
+            LOG.warnf("Marca ID %d não encontrada: %s", id, e.getMessage());
+            return Response.status(Response.Status.NOT_FOUND).entity(e.getMessage()).build();
         }
     }
 
-    // Método para adicionar uma nova marca
     @POST
-    public Response incluir(MarcaRequestDTO marcaRequestDTO) {
-        MarcaResponseDTO marcaResponseDTO = marcaService.create(marcaRequestDTO);
-        return Response.status(Response.Status.CREATED).entity(marcaResponseDTO).build();  // Retorna status 201 (Created)
+    @RolesAllowed({"ADM", "EMPLOYE"})
+    public Response incluir(@Valid MarcaRequestDTO marcaRequestDTO) {
+        LOG.infof("Usuário %s incluindo nova marca: %s.", getUsuarioEmail(), marcaRequestDTO.nome());
+        try {
+            MarcaResponseDTO marcaResponseDTO = marcaService.create(marcaRequestDTO);
+            return Response.status(Response.Status.CREATED).entity(marcaResponseDTO).build();
+        } catch (Exception e) {
+            LOG.errorf(e, "Erro ao incluir marca '%s': %s", marcaRequestDTO.nome(), e.getMessage());
+            return Response.status(Response.Status.BAD_REQUEST).entity("Erro ao incluir marca: " + e.getMessage()).build();
+        }
     }
 
-    // Método para atualizar as informações de uma marca
     @PUT
     @Path("/{id}")
-    @Transactional
-    public Response alterar(@PathParam("id") Long id, MarcaRequestDTO marcaDTO) {
+    @RolesAllowed({"ADM", "EMPLOYE"})
+    public Response alterar(@PathParam("id") Long id, @Valid MarcaRequestDTO marcaDTO) {
+        LOG.infof("Usuário %s alterando marca ID %d para nome %s.", getUsuarioEmail(), id, marcaDTO.nome());
         try {
-            marcaService.update(id, marcaDTO);  // A execução do update
-            return Response.noContent().build();  // Retorna status 204 (No Content) se atualizado com sucesso
+            marcaService.update(id, marcaDTO);
+            return Response.noContent().build();
+        } catch (MarcaNotFoundException e) {
+            LOG.warnf("Marca ID %d não encontrada para atualização: %s", id, e.getMessage());
+            return Response.status(Response.Status.NOT_FOUND).entity(e.getMessage()).build();
         } catch (Exception e) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Marca não encontrada para atualização").build();  // Retorna 404 caso não encontre
+            LOG.errorf(e, "Erro ao alterar marca ID %d: %s", id, e.getMessage());
+            return Response.status(Response.Status.BAD_REQUEST).entity("Erro ao alterar marca: " + e.getMessage()).build();
         }
     }
 
-    // Método para deletar uma marca por ID
     @DELETE
     @Path("/{id}")
-    @Transactional
+    @RolesAllowed({"ADM"})
     public Response deletar(@PathParam("id") Long id) {
+        LOG.infof("Usuário %s deletando marca ID %d.", getUsuarioEmail(), id);
         try {
-            marcaService.delete(id);  // A execução do delete
-            return Response.noContent().build();  // Retorna status 204 (No Content) se deletado com sucesso
+            marcaService.delete(id);
+            return Response.noContent().build();
+        } catch (MarcaNotFoundException e) {
+            LOG.warnf("Marca ID %d não encontrada para exclusão: %s", id, e.getMessage());
+            return Response.status(Response.Status.NOT_FOUND).entity(e.getMessage()).build();
         } catch (Exception e) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Marca não encontrada para exclusão").build();  // Retorna 404 caso não encontre
+            LOG.errorf(e, "Erro ao deletar marca ID %d: %s", id, e.getMessage());
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Erro ao deletar marca: " + e.getMessage()).build();
         }
     }
 }

@@ -1,0 +1,4 @@
+2025-06-15 01:41:12,020(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (executor-thread-3)Requisição para listar todas as cidades.
+2025-06-15 01:41:30,664(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (executor-thread-3)Requisição para criar nova cidade: Palmas
+2025-06-15 01:41:30,875(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.CidadeResource] (executor-thread-3)Cidade criada com sucesso, id: 1
+2025-06-15 01:41:45,407(dd-MM-yyyy HH:mm:ss) INFO  [io.gi.Jo.re.ClienteResource] (executor-thread-3)Execucao do metodo findAll

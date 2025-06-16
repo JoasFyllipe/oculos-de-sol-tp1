@@ -11,6 +11,7 @@ import io.github.JoasFyllipe.repository.UsuarioRepository;
 import io.github.JoasFyllipe.model.usuario.Usuario;
 import io.github.JoasFyllipe.exceptions.UsuarioNotFoundException;
 import io.github.JoasFyllipe.dto.usuario.UsuarioUpdateRequestDTO;
+import jakarta.validation.ValidationException;
 
 @ApplicationScoped
 public class UsuarioServiceImpl implements UsuarioService {
@@ -18,93 +19,57 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Inject
     UsuarioRepository usuarioRepository;
 
+
     @Override
-    @Transactional
-    public UsuarioResponseDTO create(UsuarioRequestDTO usuarioDTO) {
-        Usuario novoUsuario = new Usuario();
-        novoUsuario.setNome(usuarioDTO.nome());
-        System.out.println(usuarioDTO.cpf());
-        novoUsuario.setCpf(usuarioDTO.cpf());
-        novoUsuario.setTelefone(usuarioDTO.telefone());
-        novoUsuario.setEmail(usuarioDTO.email());
-        novoUsuario.setDataNascimento(usuarioDTO.dataNascimento());
+    public UsuarioResponseDTO findByEmail(String email) {
+        var usuario = usuarioRepository.findByEmail(email);
+        if(usuario == null)
+            throw new ValidationException("Email não encontrado");
 
-        usuarioRepository.persist(novoUsuario);
+        return UsuarioResponseDTO.valueOf(usuario);
 
-        return new UsuarioResponseDTO(
-            novoUsuario.getId(),
-            novoUsuario.getNome(),
-            novoUsuario.getCpf(),
-            novoUsuario.getTelefone(),
-            novoUsuario.getEmail(),
-            novoUsuario.getDataNascimento()
-        );
+    }
+    @Override
+    public Usuario findByUsernameAndSenha(String email, String senha) {
+        return usuarioRepository.findByEmailAndSenha(email, senha);
     }
 
     @Override
-    @Transactional
-    public void update(Long id, UsuarioUpdateRequestDTO usuarioDTO) {
-        Usuario usuarioExistente = usuarioRepository.findById(id);
-        if (usuarioExistente != null) {
-            usuarioExistente.setNome(usuarioDTO.nome());
-            usuarioExistente.setEmail(usuarioDTO.email());
-        } else {
-            throw new UsuarioNotFoundException("Usuário não encontrado para o Id: " + id);
-        }
+    public UsuarioResponseDTO findByUsername(String username) {
+        var usuario = usuarioRepository.findByUsername(username);
+        if(usuario == null)
+            throw new ValidationException("Username não encontrado");
+
+        return UsuarioResponseDTO.valueOf(usuario);
     }
 
     @Override
-    @Transactional
-    public void delete(Long id) {
-        if (!usuarioRepository.deleteById(id)) {
-            throw new UsuarioNotFoundException("Usuário não encontrado para o Id: " + id);
-        }
+    public UsuarioResponseDTO findByCpf(String cpf) {
+        var usuario = usuarioRepository.findByCpf(cpf);
+        if(usuario == null)
+            throw new ValidationException("cpf não encontrado");
+
+        return UsuarioResponseDTO.valueOf(usuario);
+    }
+
+    @Override
+    public List<UsuarioResponseDTO> findAll() {
+        return usuarioRepository.findAll().list()
+                .stream()
+                .map(UsuarioResponseDTO::valueOf)
+                .collect(Collectors.toList());
     }
 
     @Override
     public UsuarioResponseDTO findById(Long id) {
         Usuario usuario = usuarioRepository.findById(id);
-        if (usuario == null) {
-            throw new UsuarioNotFoundException("Usuário não encontrado para o Id: " + id);
-        }
-        return new UsuarioResponseDTO(
-            usuario.getId(),
-            usuario.getNome(),
-            usuario.getCpf(),
-            usuario.getTelefone(),
-            usuario.getEmail(),
-            usuario.getDataNascimento()
-        );
+        if(usuario == null)
+            throw new UsuarioNotFoundException("Usuario não encontrado. Id: "+ id);
+        return UsuarioResponseDTO.valueOf(usuario);
     }
 
     @Override
-    public UsuarioResponseDTO findByNome(String nome) {
-        Usuario usuario = usuarioRepository.findByNome(nome);
-        if (usuario == null) {
-            throw new UsuarioNotFoundException("Usuário não encontrado para o nome: " + nome);
-        }
-        return new UsuarioResponseDTO(
-            usuario.getId(),
-            usuario.getNome(),
-            usuario.getCpf(),
-            usuario.getTelefone(),
-            usuario.getEmail(),
-            usuario.getDataNascimento()
-        );
-    }
-
-    @Override
-    public List<UsuarioResponseDTO> findAll() {
-        return usuarioRepository.findAll()
-            .stream()
-            .map(usuario -> new UsuarioResponseDTO(
-                usuario.getId(),
-                usuario.getNome(),
-                usuario.getCpf(),
-                usuario.getTelefone(),
-                usuario.getEmail(),
-                usuario.getDataNascimento()
-            ))
-            .collect(Collectors.toList());
+    public void delete(Long id) {
+        usuarioRepository.deleteById(id);
     }
 }
